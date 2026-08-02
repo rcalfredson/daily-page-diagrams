@@ -34,15 +34,15 @@
           <text x="456" y="516" class="annotation-detail">vertical segment</text>
         </g>
         <g class="callout constant-t">
-          <path d="M 700 170 L 700 126" />
+          <path d="M 700 170 L 700 145" />
           <text x="700" y="101" text-anchor="middle">constant <tspan font-style="italic">T</tspan></text>
           <text x="700" y="128" text-anchor="middle" class="annotation-detail">horizontal segment</text>
         </g>
         <g class="area-note">
-          <path d="M 340 420 C 520 420 680 468 830 468" />
-          <rect x="830" y="412" width="420" height="112" rx="18" />
-          <text x="1040" y="454" text-anchor="middle">Enclosed geometry is visible.</text>
-          <text x="1040" y="489" text-anchor="middle" class="annotation-detail">Its meaning requires assumptions.</text>
+          <path d="M 340 420 C 460 420 580 468 700 468" />
+          <rect x="700" y="412" width="420" height="112" rx="18" />
+          <text x="910" y="454" text-anchor="middle">Enclosed geometry is visible.</text>
+          <text x="910" y="489" text-anchor="middle" class="annotation-detail">Its meaning requires assumptions.</text>
         </g>
       </g>`
       : "";
