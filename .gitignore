@@ -1,0 +1,2 @@
+# Raster exports are generated locally from the canonical SVG files.
+**/output/**/*.png
