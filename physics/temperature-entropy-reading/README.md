@@ -34,7 +34,15 @@ node render.js --language es
 
 This writes `ts-reading-clean-es.svg` and `ts-reading-annotated-es.svg`, allowing the English and Spanish files to coexist. The short form `-l es` and the form `--language=es` are also supported. Run `node render.js --help` for usage information.
 
-The browser preview also includes English and Spanish controls. If calling the generator directly from JavaScript, pass `language: "en"` or `language: "es"` to `createSvg`; an omitted language defaults to English.
+Portuguese is available with the same flag:
+
+```bash
+node render.js --language pt
+```
+
+This writes `ts-reading-clean-pt.svg` and `ts-reading-annotated-pt.svg`. The short form `-l pt` and the form `--language=pt` are also supported. Run `node render.js --help` for usage information.
+
+The browser preview includes English, Spanish, and Portuguese controls. If calling the generator directly from JavaScript, pass `language: "en"`, `language: "es"`, or `language: "pt"` to `createSvg`; an omitted language defaults to English.
 
 ## Render PNGs
 

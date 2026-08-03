@@ -57,6 +57,30 @@
       areaLineTwo: "Su significado requiere supuestos.",
       states: "Estados",
     },
+    pt: {
+      title: {
+        clean: "Ciclo esquemático de temperatura e entropia",
+        annotated: "Ciclo esquemático de temperatura e entropia com anotações",
+      },
+      description: {
+        clean:
+          "Um diagrama de temperatura e entropia com quatro estados, de A a D. De A a B, o trecho é vertical; de B a C, curva-se para cima e para a direita; de C a D, é horizontal; e de D, retorna a A. As setas indicam a direção do ciclo.",
+        annotated:
+          "Um diagrama de temperatura e entropia com quatro estados, de A a D. De A a B, o trecho é vertical e está rotulado como entropia específica constante. De B a C, curva-se para cima e para a direita. De C a D, é horizontal e está rotulado como temperatura constante. De D, retorna a A. As setas indicam a direção do ciclo. Uma nota dentro do ciclo indica que o significado físico da geometria delimitada depende das hipóteses.",
+      },
+      axes: "Eixos",
+      entropyAxis: "Entropia específica,",
+      temperatureAxis: "Temperatura absoluta,",
+      processPath: "Trajetória fechada do processo",
+      annotations: "Anotações do processo",
+      constantBeforeSymbol: "",
+      constantAfterSymbol: " constante",
+      verticalSegment: "segmento vertical",
+      horizontalSegment: "segmento horizontal",
+      areaLineOne: "A geometria delimitada é visível.",
+      areaLineTwo: "Seu significado exige hipóteses.",
+      states: "Estados",
+    },
   };
   const LANGUAGES = Object.freeze(Object.keys(COPY));
 

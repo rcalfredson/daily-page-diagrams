@@ -10,7 +10,7 @@ Each diagram lives in its own directory with its source code, generated SVG file
 
 - [Reading a temperature–entropy diagram](physics/temperature-entropy-reading/)
   - A schematic T–s cycle designed to teach how to inspect axes, states, process directions, vertical and horizontal segments, and assumption-sensitive area interpretations.
-  - Generates English and Spanish SVGs through a command-line language flag.
+  - Generates English, Spanish, and Portuguese SVGs through a command-line language flag.
 
 ## Repository principles
 
