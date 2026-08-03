@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="960" viewBox="0 0 1440 960" role="img" aria-labelledby="diagram-title diagram-description">
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="960" viewBox="0 0 1440 960" role="img" aria-labelledby="diagram-title diagram-description" lang="en">
   <title id="diagram-title">Annotated schematic temperature-entropy cycle</title>
   <desc id="diagram-description">A temperature-entropy diagram with four states A through D. A to B is vertical and labeled constant specific entropy. B to C curves upward and right. C to D is horizontal and labeled constant temperature. D curves back to A. Arrows show the cycle direction. A note inside the loop says that the physical meaning of the enclosed geometry depends on assumptions.</desc>
   <defs>

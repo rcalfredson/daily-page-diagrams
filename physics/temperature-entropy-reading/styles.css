@@ -42,6 +42,13 @@ h1 {
   margin-bottom: 16px;
 }
 
+.control-group { display: flex; gap: 10px; }
+
+.control-group + .control-group {
+  padding-left: 10px;
+  border-left: 1px solid #c8c0b4;
+}
+
 button, #download {
   border: 1px solid #9aaab1;
   border-radius: 999px;

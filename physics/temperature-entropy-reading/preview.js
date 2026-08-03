@@ -1,27 +1,45 @@
 (function () {
   const diagram = document.querySelector("#diagram");
   const download = document.querySelector("#download");
-  const buttons = [...document.querySelectorAll("[data-view]")];
+  const viewButtons = [...document.querySelectorAll("[data-view]")];
+  const languageButtons = [...document.querySelectorAll("[data-language]")];
+  let currentView = "clean";
+  let currentLanguage = "en";
   let currentUrl;
 
-  function render(view) {
-    const annotated = view === "annotated";
-    const svg = TsReadingDiagram.createSvg({ annotated });
+  function render() {
+    const annotated = currentView === "annotated";
+    const svg = TsReadingDiagram.createSvg({ annotated, language: currentLanguage });
     diagram.innerHTML = svg;
 
     if (currentUrl) URL.revokeObjectURL(currentUrl);
     currentUrl = URL.createObjectURL(new Blob([svg], { type: "image/svg+xml" }));
     download.href = currentUrl;
-    download.download = `ts-reading-${view}.svg`;
+    const languageSuffix = currentLanguage === "en" ? "" : `-${currentLanguage}`;
+    download.download = `ts-reading-${currentView}${languageSuffix}.svg`;
 
-    for (const button of buttons) {
-      button.setAttribute("aria-pressed", String(button.dataset.view === view));
+    for (const button of viewButtons) {
+      button.setAttribute("aria-pressed", String(button.dataset.view === currentView));
+    }
+
+    for (const button of languageButtons) {
+      button.setAttribute("aria-pressed", String(button.dataset.language === currentLanguage));
     }
   }
 
-  for (const button of buttons) {
-    button.addEventListener("click", () => render(button.dataset.view));
+  for (const button of viewButtons) {
+    button.addEventListener("click", () => {
+      currentView = button.dataset.view;
+      render();
+    });
   }
 
-  render("clean");
+  for (const button of languageButtons) {
+    button.addEventListener("click", () => {
+      currentLanguage = button.dataset.language;
+      render();
+    });
+  }
+
+  render();
 })();

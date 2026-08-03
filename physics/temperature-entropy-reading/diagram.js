@@ -8,6 +8,58 @@
   const WIDTH = 1440;
   const HEIGHT = 960;
 
+  const COPY = {
+    en: {
+      title: {
+        clean: "Schematic temperature-entropy cycle",
+        annotated: "Annotated schematic temperature-entropy cycle",
+      },
+      description: {
+        clean:
+          "A temperature-entropy diagram with four states A through D. A to B is vertical, B to C curves upward and right, C to D is horizontal, and D curves back to A. Arrows show the cycle direction.",
+        annotated:
+          "A temperature-entropy diagram with four states A through D. A to B is vertical and labeled constant specific entropy. B to C curves upward and right. C to D is horizontal and labeled constant temperature. D curves back to A. Arrows show the cycle direction. A note inside the loop says that the physical meaning of the enclosed geometry depends on assumptions.",
+      },
+      axes: "Axes",
+      entropyAxis: "Specific entropy,",
+      temperatureAxis: "Absolute temperature,",
+      processPath: "Closed process path",
+      annotations: "Process annotations",
+      constantBeforeSymbol: "constant ",
+      constantAfterSymbol: "",
+      verticalSegment: "vertical segment",
+      horizontalSegment: "horizontal segment",
+      areaLineOne: "Enclosed geometry is visible.",
+      areaLineTwo: "Its meaning requires assumptions.",
+      states: "States",
+    },
+    es: {
+      title: {
+        clean: "Ciclo esquemático de temperatura y entropía",
+        annotated: "Ciclo esquemático de temperatura y entropía con anotaciones",
+      },
+      description: {
+        clean:
+          "Un diagrama de temperatura y entropía con cuatro estados, de A a D. De A a B el tramo es vertical, de B a C se curva hacia arriba y a la derecha, de C a D es horizontal y de D regresa a A. Las flechas indican la dirección del ciclo.",
+        annotated:
+          "Un diagrama de temperatura y entropía con cuatro estados, de A a D. De A a B el tramo es vertical y está rotulado como entropía específica constante. De B a C se curva hacia arriba y a la derecha. De C a D es horizontal y está rotulado como temperatura constante. De D regresa a A. Las flechas indican la dirección del ciclo. Una nota dentro del ciclo indica que el significado físico de la geometría encerrada depende de los supuestos.",
+      },
+      axes: "Ejes",
+      entropyAxis: "Entropía específica,",
+      temperatureAxis: "Temperatura absoluta,",
+      processPath: "Trayectoria cerrada del proceso",
+      annotations: "Anotaciones del proceso",
+      constantBeforeSymbol: "",
+      constantAfterSymbol: " constante",
+      verticalSegment: "segmento vertical",
+      horizontalSegment: "segmento horizontal",
+      areaLineOne: "La geometría encerrada es visible.",
+      areaLineTwo: "Su significado requiere supuestos.",
+      states: "Estados",
+    },
+  };
+  const LANGUAGES = Object.freeze(Object.keys(COPY));
+
   function escapeXml(value) {
     return String(value)
       .replaceAll("&", "&amp;")
@@ -18,37 +70,41 @@
 
   function createSvg(options = {}) {
     const annotated = Boolean(options.annotated);
-    const title = annotated
-      ? "Annotated schematic temperature-entropy cycle"
-      : "Schematic temperature-entropy cycle";
-    const description = annotated
-      ? "A temperature-entropy diagram with four states A through D. A to B is vertical and labeled constant specific entropy. B to C curves upward and right. C to D is horizontal and labeled constant temperature. D curves back to A. Arrows show the cycle direction. A note inside the loop says that the physical meaning of the enclosed geometry depends on assumptions."
-      : "A temperature-entropy diagram with four states A through D. A to B is vertical, B to C curves upward and right, C to D is horizontal, and D curves back to A. Arrows show the cycle direction.";
+    const language = options.language || "en";
+    const copy = COPY[language];
+
+    if (!copy) {
+      throw new RangeError(`Unsupported language: ${language}. Expected one of: ${LANGUAGES.join(", ")}`);
+    }
+
+    const view = annotated ? "annotated" : "clean";
+    const title = copy.title[view];
+    const description = copy.description[view];
 
     const annotations = annotated
       ? `
-      <g class="annotations" aria-label="Process annotations">
+      <g class="annotations" aria-label="${copy.annotations}">
         <g class="callout constant-s">
           <path d="M 390 500 L 438 500" />
-          <text x="456" y="489">constant <tspan font-style="italic">s</tspan></text>
-          <text x="456" y="516" class="annotation-detail">vertical segment</text>
+          <text x="456" y="489">${copy.constantBeforeSymbol}<tspan font-style="italic">s</tspan>${copy.constantAfterSymbol}</text>
+          <text x="456" y="516" class="annotation-detail">${copy.verticalSegment}</text>
         </g>
         <g class="callout constant-t">
           <path d="M 700 170 L 700 145" />
-          <text x="700" y="101" text-anchor="middle">constant <tspan font-style="italic">T</tspan></text>
-          <text x="700" y="128" text-anchor="middle" class="annotation-detail">horizontal segment</text>
+          <text x="700" y="101" text-anchor="middle">${copy.constantBeforeSymbol}<tspan font-style="italic">T</tspan>${copy.constantAfterSymbol}</text>
+          <text x="700" y="128" text-anchor="middle" class="annotation-detail">${copy.horizontalSegment}</text>
         </g>
         <g class="area-note">
           <path d="M 340 420 C 460 420 580 468 700 468" />
           <rect x="700" y="412" width="420" height="112" rx="18" />
-          <text x="910" y="454" text-anchor="middle">Enclosed geometry is visible.</text>
-          <text x="910" y="489" text-anchor="middle" class="annotation-detail">Its meaning requires assumptions.</text>
+          <text x="910" y="454" text-anchor="middle">${copy.areaLineOne}</text>
+          <text x="910" y="489" text-anchor="middle" class="annotation-detail">${copy.areaLineTwo}</text>
         </g>
       </g>`
       : "";
 
     return `<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="${WIDTH}" height="${HEIGHT}" viewBox="0 0 ${WIDTH} ${HEIGHT}" role="img" aria-labelledby="diagram-title diagram-description">
+<svg xmlns="http://www.w3.org/2000/svg" width="${WIDTH}" height="${HEIGHT}" viewBox="0 0 ${WIDTH} ${HEIGHT}" role="img" aria-labelledby="diagram-title diagram-description" lang="${language}">
   <title id="diagram-title">${escapeXml(title)}</title>
   <desc id="diagram-description">${escapeXml(description)}</desc>
   <defs>
@@ -77,18 +133,18 @@
 
   <rect width="1440" height="960" fill="#fbf8f1" />
 
-  <g aria-label="Axes">
+  <g aria-label="${copy.axes}">
     <path class="axis" d="M 165 790 L 1320 790" marker-end="url(#axis-arrow)" />
     <path class="axis" d="M 165 790 L 165 85" marker-end="url(#axis-arrow)" />
     <text class="axis-label" x="742" y="882" text-anchor="middle">
-      Specific entropy, <tspan class="axis-symbol">s</tspan> (kJ·kg⁻¹·K⁻¹)
+      ${copy.entropyAxis} <tspan class="axis-symbol">s</tspan> (kJ·kg⁻¹·K⁻¹)
     </text>
     <text class="axis-label" x="59" y="438" text-anchor="middle" transform="rotate(-90 59 438)">
-      Absolute temperature, <tspan class="axis-symbol">T</tspan> (K)
+      ${copy.temperatureAxis} <tspan class="axis-symbol">T</tspan> (K)
     </text>
   </g>
 
-  <g aria-label="Closed process path">
+  <g aria-label="${copy.processPath}">
     <path class="cycle-fill" d="M 370 680 L 370 330 C 560 310 850 250 1070 190 L 280 190 C 255 330 300 575 370 680 Z" />
     <path class="process process-with-arrow" d="M 370 680 L 370 505 L 370 330" />
     <path class="process process-with-arrow" d="M 370 330 C 484 318 634 291.6 783.28 259.44 C 882.8 238 982 214 1070 190" />
@@ -98,7 +154,7 @@
 
   ${annotations}
 
-  <g aria-label="States">
+  <g aria-label="${copy.states}">
     <g class="state" transform="translate(370 680)"><circle r="25" /><text x="-45" y="53" text-anchor="middle">A</text></g>
     <g class="state" transform="translate(370 330)"><circle r="25" /><text x="-43" y="-34" text-anchor="middle">B</text></g>
     <g class="state" transform="translate(1070 190)"><circle r="25" /><text x="43" y="-26" text-anchor="middle">C</text></g>
@@ -107,5 +163,5 @@
 </svg>`;
   }
 
-  return { createSvg, WIDTH, HEIGHT };
+  return { createSvg, LANGUAGES, WIDTH, HEIGHT };
 });

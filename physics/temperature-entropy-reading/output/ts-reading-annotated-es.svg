@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="960" viewBox="0 0 1440 960" role="img" aria-labelledby="diagram-title diagram-description" lang="en">
-  <title id="diagram-title">Schematic temperature-entropy cycle</title>
-  <desc id="diagram-description">A temperature-entropy diagram with four states A through D. A to B is vertical, B to C curves upward and right, C to D is horizontal, and D curves back to A. Arrows show the cycle direction.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="960" viewBox="0 0 1440 960" role="img" aria-labelledby="diagram-title diagram-description" lang="es">
+  <title id="diagram-title">Ciclo esquemático de temperatura y entropía con anotaciones</title>
+  <desc id="diagram-description">Un diagrama de temperatura y entropía con cuatro estados, de A a D. De A a B el tramo es vertical y está rotulado como entropía específica constante. De B a C se curva hacia arriba y a la derecha. De C a D es horizontal y está rotulado como temperatura constante. De D regresa a A. Las flechas indican la dirección del ciclo. Una nota dentro del ciclo indica que el significado físico de la geometría encerrada depende de los supuestos.</desc>
   <defs>
     <marker id="axis-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="24" markerHeight="24" orient="auto">
       <path d="M 0 0 L 10 5 L 0 10 Z" fill="#263746" />
@@ -28,18 +28,18 @@
 
   <rect width="1440" height="960" fill="#fbf8f1" />
 
-  <g aria-label="Axes">
+  <g aria-label="Ejes">
     <path class="axis" d="M 165 790 L 1320 790" marker-end="url(#axis-arrow)" />
     <path class="axis" d="M 165 790 L 165 85" marker-end="url(#axis-arrow)" />
     <text class="axis-label" x="742" y="882" text-anchor="middle">
-      Specific entropy, <tspan class="axis-symbol">s</tspan> (kJ·kg⁻¹·K⁻¹)
+      Entropía específica, <tspan class="axis-symbol">s</tspan> (kJ·kg⁻¹·K⁻¹)
     </text>
     <text class="axis-label" x="59" y="438" text-anchor="middle" transform="rotate(-90 59 438)">
-      Absolute temperature, <tspan class="axis-symbol">T</tspan> (K)
+      Temperatura absoluta, <tspan class="axis-symbol">T</tspan> (K)
     </text>
   </g>
 
-  <g aria-label="Closed process path">
+  <g aria-label="Trayectoria cerrada del proceso">
     <path class="cycle-fill" d="M 370 680 L 370 330 C 560 310 850 250 1070 190 L 280 190 C 255 330 300 575 370 680 Z" />
     <path class="process process-with-arrow" d="M 370 680 L 370 505 L 370 330" />
     <path class="process process-with-arrow" d="M 370 330 C 484 318 634 291.6 783.28 259.44 C 882.8 238 982 214 1070 190" />
@@ -48,8 +48,26 @@
   </g>
 
   
+      <g class="annotations" aria-label="Anotaciones del proceso">
+        <g class="callout constant-s">
+          <path d="M 390 500 L 438 500" />
+          <text x="456" y="489"><tspan font-style="italic">s</tspan> constante</text>
+          <text x="456" y="516" class="annotation-detail">segmento vertical</text>
+        </g>
+        <g class="callout constant-t">
+          <path d="M 700 170 L 700 145" />
+          <text x="700" y="101" text-anchor="middle"><tspan font-style="italic">T</tspan> constante</text>
+          <text x="700" y="128" text-anchor="middle" class="annotation-detail">segmento horizontal</text>
+        </g>
+        <g class="area-note">
+          <path d="M 340 420 C 460 420 580 468 700 468" />
+          <rect x="700" y="412" width="420" height="112" rx="18" />
+          <text x="910" y="454" text-anchor="middle">La geometría encerrada es visible.</text>
+          <text x="910" y="489" text-anchor="middle" class="annotation-detail">Su significado requiere supuestos.</text>
+        </g>
+      </g>
 
-  <g aria-label="States">
+  <g aria-label="Estados">
     <g class="state" transform="translate(370 680)"><circle r="25" /><text x="-45" y="53" text-anchor="middle">A</text></g>
     <g class="state" transform="translate(370 330)"><circle r="25" /><text x="-43" y="-34" text-anchor="middle">B</text></g>
     <g class="state" transform="translate(1070 190)"><circle r="25" /><text x="43" y="-26" text-anchor="middle">C</text></g>

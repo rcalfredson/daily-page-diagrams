@@ -15,8 +15,14 @@
       </header>
 
       <nav class="controls" aria-label="Diagram controls">
-        <button type="button" data-view="clean" aria-pressed="true">Clean</button>
-        <button type="button" data-view="annotated" aria-pressed="false">Annotated</button>
+        <div class="control-group" aria-label="View">
+          <button type="button" data-view="clean" aria-pressed="true">Clean</button>
+          <button type="button" data-view="annotated" aria-pressed="false">Annotated</button>
+        </div>
+        <div class="control-group" aria-label="Language">
+          <button type="button" data-language="en" aria-pressed="true">English</button>
+          <button type="button" data-language="es" aria-pressed="false">Español</button>
+        </div>
         <a id="download" download="ts-reading-clean.svg">Download SVG</a>
       </nav>
 

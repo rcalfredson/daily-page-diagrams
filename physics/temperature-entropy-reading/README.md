@@ -18,11 +18,23 @@ Arrowheads are attached directly to the process paths with SVG `marker-mid`. The
 
 ## Generate the SVG files
 
+English is the default, so the existing command and filenames remain unchanged:
+
 ```bash
 node render.js
 ```
 
-This writes clean and annotated SVGs into `output/` from the single source in `diagram.js`.
+This writes `ts-reading-clean.svg` and `ts-reading-annotated.svg` into `output/` from the single source in `diagram.js`.
+
+Pass the language flag to generate the Spanish versions:
+
+```bash
+node render.js --language es
+```
+
+This writes `ts-reading-clean-es.svg` and `ts-reading-annotated-es.svg`, allowing the English and Spanish files to coexist. The short form `-l es` and the form `--language=es` are also supported. Run `node render.js --help` for usage information.
+
+The browser preview also includes English and Spanish controls. If calling the generator directly from JavaScript, pass `language: "en"` or `language: "es"` to `createSvg`; an omitted language defaults to English.
 
 ## Render PNGs
 
@@ -40,7 +52,7 @@ inkscape output/ts-reading-annotated.svg \
   --export-filename=output/ts-reading-annotated.png
 ```
 
-Open `index.html` to switch between the two views and download either SVG directly. No build step or package installation is required.
+Open `index.html` to switch between the two views and languages and download any SVG directly. No build step or package installation is required.
 
 ## Suggested article use
 
@@ -50,4 +62,4 @@ Open `index.html` to switch between the two views and download either SVG direct
 
 ## Accessibility
 
-Each generated SVG contains a `<title>` and `<desc>`. The state labels and annotations remain live SVG text rather than outlines.
+Each generated SVG contains a localized `<title>` and `<desc>` and declares its language. The state labels and annotations remain live SVG text rather than outlines.
