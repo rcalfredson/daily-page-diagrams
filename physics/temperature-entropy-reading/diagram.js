@@ -81,6 +81,30 @@
       areaLineTwo: "Seu significado exige hipóteses.",
       states: "Estados",
     },
+    ja: {
+      title: {
+        clean: "模式的な温度–エントロピーサイクル",
+        annotated: "注釈付きの模式的な温度–エントロピーサイクル",
+      },
+      description: {
+        clean:
+          "4つの状態AからDを示す温度–エントロピー線図。AからBは鉛直、BからCは右上がりの曲線、CからDは水平で、DからAへ戻る。矢印はサイクルの進行方向を示す。",
+        annotated:
+          "4つの状態AからDを示す温度–エントロピー線図。AからBは鉛直で、比エントロピー一定と注記されている。BからCは右上がりの曲線である。CからDは水平で、温度一定と注記されている。DからAへ戻る。矢印はサイクルの進行方向を示す。サイクル内の注記は、囲まれた領域の物理的意味が仮定に依存することを示す。",
+      },
+      axes: "軸",
+      entropyAxis: "比エントロピー",
+      temperatureAxis: "絶対温度",
+      processPath: "閉じたプロセス経路",
+      annotations: "プロセスの注釈",
+      constantBeforeSymbol: "",
+      constantAfterSymbol: " 一定",
+      verticalSegment: "鉛直区間",
+      horizontalSegment: "水平区間",
+      areaLineOne: "囲まれた領域を確認できます。",
+      areaLineTwo: "その意味には仮定が必要です。",
+      states: "状態",
+    },
   };
   const LANGUAGES = Object.freeze(Object.keys(COPY));
 
