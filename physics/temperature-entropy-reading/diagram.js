@@ -105,6 +105,30 @@
       areaLineTwo: "その意味には仮定が必要です。",
       states: "状態",
     },
+    vi: {
+      title: {
+        clean: "Chu trình nhiệt độ–entropy minh họa",
+        annotated: "Chu trình nhiệt độ–entropy minh họa có chú thích",
+      },
+      description: {
+        clean:
+          "Đồ thị nhiệt độ–entropy với bốn trạng thái từ A đến D. Đoạn từ A đến B thẳng đứng; từ B đến C cong lên trên và sang phải; từ C đến D nằm ngang; và từ D cong trở lại A. Các mũi tên chỉ chiều của chu trình.",
+        annotated:
+          "Đồ thị nhiệt độ–entropy với bốn trạng thái từ A đến D. Đoạn từ A đến B thẳng đứng và được ghi là entropy riêng không đổi. Từ B đến C cong lên trên và sang phải. Từ C đến D nằm ngang và được ghi là nhiệt độ không đổi. Từ D cong trở lại A. Các mũi tên chỉ chiều của chu trình. Một ghi chú bên trong chu trình cho biết ý nghĩa vật lý của phần hình học khép kín phụ thuộc vào các giả định.",
+      },
+      axes: "Các trục",
+      entropyAxis: "Entropy riêng,",
+      temperatureAxis: "Nhiệt độ tuyệt đối,",
+      processPath: "Đường quá trình khép kín",
+      annotations: "Chú thích quá trình",
+      constantBeforeSymbol: "",
+      constantAfterSymbol: " không đổi",
+      verticalSegment: "đoạn thẳng đứng",
+      horizontalSegment: "đoạn nằm ngang",
+      areaLineOne: "Có thể thấy hình học khép kín.",
+      areaLineTwo: "Ý nghĩa của nó cần có các giả định.",
+      states: "Các trạng thái",
+    },
   };
   const LANGUAGES = Object.freeze(Object.keys(COPY));
 
