@@ -49,6 +49,7 @@ try {
 
 const outputDirectory = path.join(__dirname, "output");
 fs.mkdirSync(outputDirectory, { recursive: true });
-const file = path.join(outputDirectory, "light-cone-causal-map.svg");
+const languageSuffix = options.language === "en" ? "" : `-${options.language}`;
+const file = path.join(outputDirectory, `light-cone-causal-map${languageSuffix}.svg`);
 fs.writeFileSync(file, createSvg(options), "utf8");
 console.log(path.relative(process.cwd(), file));

@@ -37,19 +37,26 @@ h1 {
 
 .controls {
   display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   justify-content: flex-end;
   margin-bottom: 16px;
 }
 
-#download {
+.control-group { display: flex; gap: 10px; }
+
+button, #download {
   border: 1px solid #78949e;
   border-radius: 999px;
   padding: 9px 17px;
-  color: #fff;
-  background: #28758a;
+  color: #263746;
+  background: #fffdfa;
   font: 650 0.95rem/1 system-ui, sans-serif;
+  cursor: pointer;
   text-decoration: none;
 }
+
+button[aria-pressed="true"], #download { color: #fff; background: #28758a; }
 
 figure { margin: 0; }
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="960" viewBox="0 0 1440 960" role="img" aria-labelledby="diagram-title diagram-description" lang="en" xml:lang="en">
-  <title id="diagram-title">Light cone causal map centered on event O</title>
-  <desc id="diagram-description">A flat-spacetime diagram with time vertical and one spatial dimension horizontal, centered on chosen event O. The shaded upper cone is O's causal future and contains F, which is timelike-separated and could be affected by O. The shaded lower cone is O's causal past and contains P, which is timelike-separated and could have affected O. Four diagonal light rays form the lightlike boundaries; L lies exactly on the upper-right boundary. S lies in the right spacelike exterior, outside the cone, and is spacelike-separated from O. The axes are equally scaled so light travels at 45 degrees, using units where c equals 1.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="960" viewBox="0 0 1440 960" role="img" aria-labelledby="diagram-title diagram-description" lang="es" xml:lang="es">
+  <title id="diagram-title">Mapa causal del cono de luz centrado en el evento O</title>
+  <desc id="diagram-description">Diagrama de espaciotiempo plano con el tiempo en el eje vertical y una dimensión espacial en el horizontal, centrado en el evento elegido O. El cono superior sombreado es el futuro causal de O y contiene F, que tiene separación temporal y podría verse afectado por O. El cono inferior sombreado es el pasado causal de O y contiene P, que tiene separación temporal y podría haber afectado a O. Cuatro rayos de luz diagonales forman las fronteras de tipo luz; L está exactamente sobre la frontera superior derecha. S está en el exterior espacial derecho, fuera del cono, y tiene separación espacial respecto de O. Los ejes usan la misma escala para que la luz viaje a 45 grados, en unidades donde c es igual a 1.</desc>
   <defs>
     <marker id="axis-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="20" markerHeight="20" orient="auto">
       <path d="M 0 0 L 10 5 L 0 10 Z" fill="#304452" />
@@ -36,67 +36,67 @@
 
   <rect width="1440" height="960" fill="#fbf8f1" />
 
-  <g aria-label="Causal regions relative to event O">
+  <g aria-label="Regiones causales respecto del evento O">
     <path class="exterior-fill" d="M 110 90 L 330 90 L 720 480 L 330 870 L 110 870 Z" />
     <path class="exterior-fill" d="M 1330 90 L 1110 90 L 720 480 L 1110 870 L 1330 870 Z" />
     <path class="cone-fill" d="M 330 90 L 720 480 L 1110 90 Z" />
     <path class="cone-fill" d="M 720 480 L 330 870 L 1110 870 Z" />
   </g>
 
-  <g aria-label="Spacetime axes">
+  <g aria-label="Ejes del espaciotiempo">
     <path class="axis" d="M 110 480 L 1330 480" marker-end="url(#axis-arrow)" />
     <path class="axis" d="M 720 885 L 720 70" marker-end="url(#axis-arrow)" />
-    <text class="axis-label" x="1305" y="528" text-anchor="end">Position, <tspan class="axis-symbol">x</tspan></text>
-    <text class="axis-label" x="750" y="82">Time, <tspan class="axis-symbol">t</tspan></text>
+    <text class="axis-label" x="1305" y="528" text-anchor="end">Posición, <tspan class="axis-symbol">x</tspan></text>
+    <text class="axis-label" x="750" y="82">Tiempo, <tspan class="axis-symbol">t</tspan></text>
   </g>
 
-  <g aria-label="Light rays and light-cone boundary">
+  <g aria-label="Rayos de luz y frontera del cono de luz">
     <path class="cone-boundary" d="M 330 90 L 720 480 L 1110 90" />
     <path class="cone-boundary" d="M 330 870 L 720 480 L 1110 870" />
     <path class="boundary-leader" d="M 340 218 L 405 218 L 444 204" />
-    <text class="boundary-label" x="165" y="184">Light rays</text>
-    <text class="boundary-detail" x="165" y="212">light-cone boundary</text>
+    <text class="boundary-label" x="185" y="184">Rayos de luz</text>
+    <text class="boundary-detail" x="185" y="212">frontera del cono</text>
   </g>
 
   <g>
-    <text class="region-title" x="570" y="160" text-anchor="middle">CAUSAL FUTURE</text>
-    <text class="region-detail" x="570" y="191" text-anchor="middle">O could affect events here</text>
-    <text class="region-title" x="850" y="744" text-anchor="middle">CAUSAL PAST</text>
-    <text class="region-detail" x="850" y="775" text-anchor="middle">Events here could affect O</text>
+    <text class="region-title" x="570" y="160" text-anchor="middle">FUTURO CAUSAL</text>
+    <text class="region-detail" x="570" y="191" text-anchor="middle">O podría afectar aquí</text>
+    <text class="region-title" x="850" y="744" text-anchor="middle">PASADO CAUSAL</text>
+    <text class="region-detail" x="850" y="775" text-anchor="middle">Aquí podrían afectar a O</text>
 
-    <text class="exterior-title" x="165" y="356">SPACELIKE EXTERIOR</text>
-    <text class="exterior-detail" x="165" y="384">No causal connection with O</text>
-    <text class="exterior-title" x="1035" y="356">SPACELIKE EXTERIOR</text>
-    <text class="exterior-detail" x="1035" y="384">No causal connection with O</text>
+    <text class="exterior-title" x="165" y="356">EXTERIOR DE TIPO ESPACIO</text>
+    <text class="exterior-detail" x="165" y="384">Sin conexión causal con O</text>
+    <text class="exterior-title" x="1035" y="356">EXTERIOR DE TIPO ESPACIO</text>
+    <text class="exterior-detail" x="1035" y="384">Sin conexión causal con O</text>
   </g>
 
-  <g aria-label="Example events and their separation from O">
+  <g aria-label="Eventos de ejemplo y su separación respecto de O">
     <g class="event-example" transform="translate(755 195)">
       <circle r="13" />
       <text class="event-letter" x="0" y="8" text-anchor="middle">F</text>
-      <text class="event-label" x="33" y="-6">timelike separation</text>
-      <text class="event-detail" x="33" y="19">could be affected by O</text>
+      <text class="event-label" x="33" y="-6">separación temporal</text>
+      <text class="event-detail" x="33" y="19">O podría afectarlo</text>
     </g>
 
     <g class="event-example" transform="translate(660 790)">
       <circle r="13" />
       <text class="event-letter" x="0" y="8" text-anchor="middle">P</text>
-      <text class="event-label" x="-30" y="-7" text-anchor="end">timelike separation</text>
-      <text class="event-detail" x="-30" y="18" text-anchor="end">could have affected O</text>
+      <text class="event-label" x="-30" y="-7" text-anchor="end">separación temporal</text>
+      <text class="event-detail" x="-30" y="18" text-anchor="end">podría haber afectado a O</text>
     </g>
 
     <g class="event-example" transform="translate(1040 160)">
       <circle r="13" />
       <text class="event-letter" x="0" y="8" text-anchor="middle">L</text>
-      <text class="event-label" x="38" y="-6">lightlike separation</text>
-      <text class="event-detail" x="38" y="19">on the boundary</text>
+      <text class="event-label" x="38" y="-6">separación de tipo luz</text>
+      <text class="event-detail" x="38" y="19">sobre la frontera</text>
     </g>
 
     <g class="event-example" transform="translate(1080 600)">
       <circle r="13" />
       <text class="event-letter" x="0" y="8" text-anchor="middle">S</text>
-      <text class="event-label" x="30" y="-6">spacelike separation</text>
-      <text class="event-detail" x="30" y="19">outside the cone</text>
+      <text class="event-label" x="30" y="-6">separación espacial</text>
+      <text class="event-detail" x="30" y="19">fuera del cono</text>
     </g>
 
     <g class="event-o" transform="translate(720 480)">
@@ -105,11 +105,11 @@
       <text class="o-letter" x="0" y="8" text-anchor="middle">O</text>
     </g>
     <path class="boundary-leader" d="M 645 439 L 669 439 L 688 457" />
-    <text class="chosen-label" x="625" y="445" text-anchor="end">Chosen event</text>
+    <text class="chosen-label" x="625" y="445" text-anchor="end">Evento elegido</text>
   </g>
 
   <g>
     <path class="note-rule" d="M 275 912 L 1165 912" />
-    <text class="note" x="720" y="938" text-anchor="middle">Axes use equal scales with c = 1, so light rays appear at 45°. One spatial dimension is shown; omitted directions are compressed.</text>
+    <text class="note" x="720" y="938" text-anchor="middle">Escalas iguales y c = 1 hacen que la luz forme 45°. Se muestra una dimensión espacial; las demás se comprimen.</text>
   </g>
 </svg>

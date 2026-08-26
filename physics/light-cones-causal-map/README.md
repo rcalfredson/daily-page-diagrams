@@ -23,7 +23,15 @@ node render.js
 
 The equivalent explicit form is `node render.js --language en`. Both write `output/light-cone-causal-map.svg`. Open `index.html` in a browser for a responsive article-width preview and an SVG download link. No package installation or external JavaScript dependency is required.
 
-Reader-facing SVG text is centralized in the `COPY` object in `diagram.js`. English is the only current entry, but another language can be added there without modifying geometry.
+Generate the Spanish SVG with:
+
+```bash
+node render.js --language es
+```
+
+This writes `output/light-cone-causal-map-es.svg`, allowing both languages to coexist. The short form `-l es` and `--language=es` are also supported. The browser preview includes English and Spanish controls and downloads the currently displayed language.
+
+Reader-facing SVG text is centralized in the `COPY` object in `diagram.js`, allowing English and Spanish to share identical geometry.
 
 ## Local PNG export
 
@@ -34,6 +42,11 @@ inkscape output/light-cone-causal-map.svg \
   --export-type=png \
   --export-width=1800 \
   --export-filename=output/light-cone-causal-map.png
+
+inkscape output/light-cone-causal-map-es.svg \
+  --export-type=png \
+  --export-width=1800 \
+  --export-filename=output/light-cone-causal-map-es.png
 ```
 
 Generated PNGs under `output/` are ignored by Git and should not be committed.
@@ -48,4 +61,4 @@ Suggested alt text:
 
 > A spacetime diagram centered on event O, with causal past and causal future inside the light cone, light rays on its boundaries, and spacelike regions outside.
 
-The generated SVG has `role="img"`, connects a meaningful `<title>` and detailed `<desc>` through `aria-labelledby`, and declares English with both `lang` and `xml:lang`. All labels remain live SVG text rather than outlined paths.
+Each generated SVG has `role="img"`, connects a localized `<title>` and detailed `<desc>` through `aria-labelledby`, and declares its language with both `lang` and `xml:lang`. All labels remain live SVG text rather than outlined paths.

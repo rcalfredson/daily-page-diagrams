@@ -45,8 +45,46 @@
       scaleNote: "Axes use equal scales with c = 1, so light rays appear at 45°.",
       dimensionNote: "One spatial dimension is shown; omitted directions are compressed.",
     },
+    es: {
+      title: "Mapa causal del cono de luz centrado en el evento O",
+      description:
+        "Diagrama de espaciotiempo plano con el tiempo en el eje vertical y una dimensión espacial en el horizontal, centrado en el evento elegido O. El cono superior sombreado es el futuro causal de O y contiene F, que tiene separación temporal y podría verse afectado por O. El cono inferior sombreado es el pasado causal de O y contiene P, que tiene separación temporal y podría haber afectado a O. Cuatro rayos de luz diagonales forman las fronteras de tipo luz; L está exactamente sobre la frontera superior derecha. S está en el exterior espacial derecho, fuera del cono, y tiene separación espacial respecto de O. Los ejes usan la misma escala para que la luz viaje a 45 grados, en unidades donde c es igual a 1.",
+      axes: "Ejes del espaciotiempo",
+      regions: "Regiones causales respecto del evento O",
+      examples: "Eventos de ejemplo y su separación respecto de O",
+      position: "Posición,",
+      time: "Tiempo,",
+      future: "FUTURO CAUSAL",
+      futureDetail: "O podría afectar aquí",
+      past: "PASADO CAUSAL",
+      pastDetail: "Aquí podrían afectar a O",
+      exterior: "EXTERIOR DE TIPO ESPACIO",
+      exteriorDetail: "Sin conexión causal con O",
+      boundary: "Rayos de luz y frontera del cono de luz",
+      boundaryTitle: "Rayos de luz",
+      boundaryDetail: "frontera del cono",
+      chosen: "Evento elegido",
+      eventO: "O",
+      eventF: "F",
+      eventP: "P",
+      eventL: "L",
+      eventS: "S",
+      timelike: "separación temporal",
+      futureRelation: "O podría afectarlo",
+      pastRelation: "podría haber afectado a O",
+      lightlike: "separación de tipo luz",
+      onBoundary: "sobre la frontera",
+      spacelike: "separación espacial",
+      outsideCone: "fuera del cono",
+      scaleNote: "Escalas iguales y c = 1 hacen que la luz forme 45°.",
+      dimensionNote: "Se muestra una dimensión espacial; las demás se comprimen.",
+    },
   };
   const LANGUAGES = Object.freeze(Object.keys(COPY));
+  const LAYOUT = {
+    en: { boundaryLabelX: 165 },
+    es: { boundaryLabelX: 185 },
+  };
 
   function escapeXml(value) {
     return String(value)
@@ -59,6 +97,7 @@
   function createSvg(options = {}) {
     const language = options.language || "en";
     const copy = COPY[language];
+    const layout = LAYOUT[language];
 
     if (!copy) {
       throw new RangeError(`Unsupported language: ${language}. Expected one of: ${LANGUAGES.join(", ")}`);
@@ -122,15 +161,15 @@
     <path class="cone-boundary" d="M 330 90 L 720 480 L 1110 90" />
     <path class="cone-boundary" d="M 330 870 L 720 480 L 1110 870" />
     <path class="boundary-leader" d="M 340 218 L 405 218 L 444 204" />
-    <text class="boundary-label" x="165" y="184">${text("boundaryTitle")}</text>
-    <text class="boundary-detail" x="165" y="212">${text("boundaryDetail")}</text>
+    <text class="boundary-label" x="${layout.boundaryLabelX}" y="184">${text("boundaryTitle")}</text>
+    <text class="boundary-detail" x="${layout.boundaryLabelX}" y="212">${text("boundaryDetail")}</text>
   </g>
 
   <g>
     <text class="region-title" x="570" y="160" text-anchor="middle">${text("future")}</text>
     <text class="region-detail" x="570" y="191" text-anchor="middle">${text("futureDetail")}</text>
-    <text class="region-title" x="865" y="744" text-anchor="middle">${text("past")}</text>
-    <text class="region-detail" x="865" y="775" text-anchor="middle">${text("pastDetail")}</text>
+    <text class="region-title" x="850" y="744" text-anchor="middle">${text("past")}</text>
+    <text class="region-detail" x="850" y="775" text-anchor="middle">${text("pastDetail")}</text>
 
     <text class="exterior-title" x="165" y="356">${text("exterior")}</text>
     <text class="exterior-detail" x="165" y="384">${text("exteriorDetail")}</text>
