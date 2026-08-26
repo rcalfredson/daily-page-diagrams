@@ -79,11 +79,46 @@
       scaleNote: "Escalas iguales y c = 1 hacen que la luz forme 45°.",
       dimensionNote: "Se muestra una dimensión espacial; las demás se comprimen.",
     },
+    fr: {
+      title: "Carte causale du cône de lumière centrée sur l’événement O",
+      description:
+        "Diagramme d’un espace-temps plat avec le temps sur l’axe vertical et une dimension spatiale sur l’axe horizontal, centré sur l’événement choisi O. Le cône supérieur ombré est le futur causal de O et contient F, qui présente une séparation temporelle et pourrait être affecté par O. Le cône inférieur ombré est le passé causal de O et contient P, qui présente une séparation temporelle et aurait pu affecter O. Quatre rayons lumineux diagonaux forment les frontières de type lumière ; L se trouve exactement sur la frontière supérieure droite. S se trouve dans la région droite de genre espace, hors du cône, et présente une séparation spatiale par rapport à O. Les axes ont la même échelle afin que la lumière se déplace à 45 degrés, dans des unités où c est égal à 1.",
+      axes: "Axes de l’espace-temps",
+      regions: "Régions causales par rapport à l’événement O",
+      examples: "Événements exemples et leur séparation par rapport à O",
+      position: "Position,",
+      time: "Temps,",
+      future: "FUTUR CAUSAL",
+      futureDetail: "Influence possible depuis O",
+      past: "PASSÉ CAUSAL",
+      pastDetail: "Influence possible sur O",
+      exterior: "RÉGION DE GENRE ESPACE",
+      exteriorDetail: "Aucun lien causal avec O",
+      boundary: "Rayons lumineux et frontière du cône de lumière",
+      boundaryTitle: "Rayons lumineux",
+      boundaryDetail: "frontière du cône",
+      chosen: "Événement choisi",
+      eventO: "O",
+      eventF: "F",
+      eventP: "P",
+      eventL: "L",
+      eventS: "S",
+      timelike: "intervalle temporel",
+      futureRelation: "O pourrait l’affecter",
+      pastRelation: "aurait pu affecter O",
+      lightlike: "séparation de type lumière",
+      onBoundary: "sur la frontière",
+      spacelike: "séparation spatiale",
+      outsideCone: "hors du cône",
+      scaleNote: "Échelles égales et c = 1 placent les rayons lumineux à 45°.",
+      dimensionNote: "Une dimension spatiale est montrée ; les autres sont comprimées.",
+    },
   };
   const LANGUAGES = Object.freeze(Object.keys(COPY));
   const LAYOUT = {
     en: { boundaryLabelX: 165 },
     es: { boundaryLabelX: 185 },
+    fr: { boundaryLabelX: 175 },
   };
 
   function escapeXml(value) {
