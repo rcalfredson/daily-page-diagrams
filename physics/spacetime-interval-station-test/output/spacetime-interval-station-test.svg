@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="960" viewBox="0 0 1440 960" role="img" aria-labelledby="diagram-title diagram-description" lang="en" xml:lang="en">
+  <title id="diagram-title">Spacetime interval station test</title>
+  <desc id="diagram-description">A numerical spacetime diagram with position horizontal and time increasing upward. A signal is emitted at zero kilometers and zero seconds. A stationary station has a vertical worldline at 900,000 kilometers. Its square alarm event at two seconds is outside the future light cone and spacelike, with interval minus 4.5 times 10 to the 11th square kilometers. Its diamond alarm at three seconds lies exactly on the lightlike boundary, with interval zero. Its circular alarm at four seconds is inside the cone and timelike, with interval plus 6.3 times 10 to the 11th square kilometers. The light boundary reaches the station at exactly three seconds.</desc>
+  <defs>
+    <marker id="axis-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="18" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 Z" fill="#304452" />
+    </marker>
+    <style>
+      text { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .axis { fill: none; stroke: #304452; stroke-width: 3; stroke-linecap: round; }
+      .grid { stroke: #b8c1be; stroke-width: 1.5; stroke-dasharray: 4 9; }
+      .tick { stroke: #304452; stroke-width: 2; }
+      .axis-label { fill: #263946; font-size: 24px; font-weight: 650; }
+      .tick-label { fill: #66767b; font-size: 17px; font-weight: 520; }
+      .cone-fill { fill: #78b5c5; fill-opacity: 0.20; }
+      .cone-boundary { fill: none; stroke: #28758a; stroke-width: 5; stroke-linecap: round; }
+      .cone-title { fill: #2c6575; font-size: 20px; font-weight: 780; letter-spacing: 0.07em; }
+      .cone-detail { fill: #587983; font-size: 17px; font-weight: 520; }
+      .boundary-label { fill: #286d80; font-size: 17px; font-weight: 650; }
+      .label-halo { paint-order: stroke fill; stroke: #e1ebe8; stroke-width: 9px; stroke-linejoin: round; }
+      .station-line { stroke: #68787c; stroke-width: 4; }
+      .station-title { fill: #4b6066; font-size: 18px; font-weight: 780; letter-spacing: 0.06em; }
+      .event-title { fill: #263c47; font-size: 21px; font-weight: 760; }
+      .event-kind { font-size: 17px; font-weight: 780; letter-spacing: 0.035em; }
+      .event-interval { fill: #52676e; font-size: 18px; font-weight: 570; }
+      .spacelike-text { fill: #75633a; }
+      .lightlike-text { fill: #256e82; }
+      .timelike-text { fill: #356b62; }
+      .spacelike-mark { fill: #fffdfa; stroke: #9a7837; stroke-width: 4; }
+      .lightlike-mark { fill: #fffdfa; stroke: #28758a; stroke-width: 4; }
+      .timelike-mark { fill: #fffdfa; stroke: #39766c; stroke-width: 4; }
+      .emission-halo { fill: #fbf8f1; stroke: #263946; stroke-width: 2.5; }
+      .emission-core { fill: #c76543; }
+      .emission-label { fill: #743e2e; font-size: 19px; font-weight: 750; }
+      .emission-detail { fill: #68767a; font-size: 17px; font-weight: 520; }
+      .leader { fill: none; stroke: #89989a; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .arrival { fill: #245f72; font-size: 17px; font-weight: 720; }
+      .scale-note { fill: #5f7076; font-size: 17px; font-weight: 550; }
+      .note-rule { stroke: #aeb9b7; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <rect width="1440" height="960" fill="#fbf8f1" />
+
+  <g aria-label="Future light cone from the signal emission">
+    <path class="cone-fill" d="M -60 100 L 590 750 L 1240 100 Z" />
+    <path class="cone-boundary" d="M -60 100 L 590 750 L 1240 100" />
+    <text class="cone-title" x="405" y="128" text-anchor="middle">FUTURE LIGHT CONE</text>
+    <text class="cone-detail" x="405" y="155" text-anchor="middle">signals from the emission can arrive here</text>
+    <text class="boundary-label label-halo" x="252" y="346" transform="rotate(-45 252 346)">lightlike boundary</text>
+  </g>
+
+  <g aria-label="Position and time axes">
+    <path class="grid" d="M 70 605 L 1001 605 M 70 460 L 1001 460 M 70 315 L 1001 315 M 70 170 L 1001 170" />
+    <path class="axis" d="M 70 750 L 1360 750" marker-end="url(#axis-arrow)" />
+    <path class="axis" d="M 590 820 L 590 72" marker-end="url(#axis-arrow)" />
+    <text class="axis-label" x="1350" y="798" text-anchor="end">Position x (km)</text>
+    <text class="axis-label" x="618" y="87">Time t (s)</text>
+
+    <path class="tick" d="M 445 742 L 445 758 M 735 742 L 735 758 M 880 742 L 880 758 M 1025 742 L 1025 758" />
+    <text class="tick-label" x="445" y="783" text-anchor="middle">−300,000</text>
+    <text class="tick-label" x="735" y="783" text-anchor="middle">300,000</text>
+    <text class="tick-label" x="880" y="783" text-anchor="middle">600,000</text>
+    <text class="tick-label" x="1025" y="783" text-anchor="middle">900,000</text>
+
+    <path class="tick" d="M 582 605 L 598 605 M 582 460 L 598 460 M 582 315 L 598 315 M 582 170 L 598 170" />
+    <text class="tick-label" x="570" y="611" text-anchor="end">1</text>
+    <text class="tick-label" x="570" y="466" text-anchor="end">2</text>
+    <text class="tick-label" x="570" y="321" text-anchor="end">3</text>
+    <text class="tick-label" x="570" y="176" text-anchor="end">4</text>
+  </g>
+
+  <g aria-label="Station worldline and three possible alarm events">
+    <path class="station-line" d="M 1025 104 L 1025 718" />
+    <text class="station-title" x="1001" y="139" text-anchor="end">STATION · x = 900,000 km</text>
+
+    <rect class="spacelike-mark" x="1013" y="448" width="24" height="24" rx="2" />
+    <text class="event-title" x="1059" y="436">Alarm at 2 s</text>
+    <text class="event-kind spacelike-text" x="1059" y="462">SPACELIKE · outside cone</text>
+    <text class="event-interval" x="1059" y="489">Δs² = −4.5 × 10¹¹ km²</text>
+
+    <path class="lightlike-mark" d="M 1025 300 L 1040 315 L 1025 330 L 1010 315 Z" />
+    <text class="event-title" x="1091" y="291">Alarm at 3 s</text>
+    <text class="event-kind lightlike-text" x="1091" y="317">LIGHTLIKE · on boundary</text>
+    <text class="event-interval" x="1091" y="344">Δs² = 0</text>
+
+    <circle class="timelike-mark" cx="1025" cy="170" r="13" />
+    <text class="event-title" x="991" y="185" text-anchor="end">Alarm at 4 s</text>
+    <text class="event-kind timelike-text" x="991" y="211" text-anchor="end">TIMELIKE · inside cone</text>
+    <text class="event-interval" x="991" y="238" text-anchor="end">Δs² = +6.3 × 10¹¹ km²</text>
+
+    <path class="leader" d="M 1003 325 L 951 363 L 940 363" />
+    <text class="arrival" x="930" y="369" text-anchor="end">Light arrives: 3 s</text>
+  </g>
+
+  <g transform="translate(590 750)">
+    <circle class="emission-halo" r="23" />
+    <circle class="emission-core" r="16" />
+    <path class="leader" d="M -23 -18 L -48 -40 L -134 -40" />
+    <text class="emission-label" x="-145" y="-46" text-anchor="end">Signal emission</text>
+    <text class="emission-detail" x="-145" y="-21" text-anchor="end">x = 0, t = 0</text>
+  </g>
+
+  <g>
+    <path class="note-rule" d="M 220 880 L 1220 880" />
+    <text class="scale-note" x="720" y="913" text-anchor="middle">c ≈ 300,000 km/s  ·  300,000 km horizontally = 1 s vertically</text>
+  </g>
+</svg>

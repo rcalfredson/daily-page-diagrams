@@ -14,6 +14,9 @@ Each diagram lives in its own directory with its source code, generated SVG file
 - [Light cones: a causal map](physics/light-cones-causal-map/)
   - A flat-spacetime map of the causal future, causal past, lightlike boundaries, and spacelike exterior relative to a chosen event.
   - Generates English, Spanish, and French SVGs through a command-line language flag.
+- [The spacetime interval: station test](physics/spacetime-interval-station-test/)
+  - A numerical light-cone comparison of spacelike, lightlike, and timelike alarm events on one stationary station worldline.
+  - Generates an English SVG and preserves the shared command-line language interface for future translations.
 
 ## Repository principles
 
