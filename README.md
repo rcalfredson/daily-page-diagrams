@@ -11,6 +11,9 @@ Each diagram lives in its own directory with its source code, generated SVG file
 - [Reading a temperature–entropy diagram](physics/temperature-entropy-reading/)
   - A schematic T–s cycle designed to teach how to inspect axes, states, process directions, vertical and horizontal segments, and assumption-sensitive area interpretations.
   - Generates English, Spanish, Portuguese, Japanese, and Vietnamese SVGs through a command-line language flag.
+- [Light cones: a causal map](physics/light-cones-causal-map/)
+  - A flat-spacetime map of the causal future, causal past, lightlike boundaries, and spacelike exterior relative to a chosen event.
+  - Generates English, Spanish, and French SVGs through a command-line language flag.
 
 ## Repository principles
 
