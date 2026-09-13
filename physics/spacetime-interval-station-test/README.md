@@ -26,7 +26,13 @@ From this directory, generate the canonical English SVG with:
 node render.js
 ```
 
-The equivalent explicit form is `node render.js --language en`. Both write `output/spacetime-interval-station-test.svg`. The renderer also supports the reference diagrams' `-l en` and `--language=en` forms. English is currently the only translation, but all reader-facing SVG text is centralized in the `COPY` object in `diagram.js` so future languages can use identical geometry.
+The equivalent explicit form is `node render.js --language en`. Both write `output/spacetime-interval-station-test.svg`. To generate the Russian version at `output/spacetime-interval-station-test-ru.svg`, run:
+
+```bash
+node render.js --language ru
+```
+
+The renderer also supports the reference diagrams' short (`-l ru`) and equals-sign (`--language=ru`) forms. All reader-facing SVG text is centralized in the `COPY` object in `diagram.js`, so both languages use identical geometry.
 
 Open `index.html` in a browser for a responsive article-width preview and an SVG download link. No package installation or external JavaScript dependency is required.
 
