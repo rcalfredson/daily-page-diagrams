@@ -31,6 +31,12 @@
       .chosen-label { fill: #7c3f2c; font-size: 19px; font-weight: 750; }
       .note { fill: #62727a; font-size: 17px; font-weight: 500; }
       .note-rule { stroke: #aeb9b7; stroke-width: 2; }
+      svg:lang(ru) .region-title { font-size: 20px; letter-spacing: 0.035em; }
+      svg:lang(ru) .region-detail { font-size: 17px; }
+      svg:lang(ru) .exterior-title { font-size: 12px; letter-spacing: 0.015em; }
+      svg:lang(ru) .exterior-detail { font-size: 14px; }
+      svg:lang(ru) .event-label { font-size: 16px; }
+      svg:lang(ru) .note { font-size: 14px; }
     </style>
   </defs>
 

@@ -113,12 +113,47 @@
       scaleNote: "Échelles égales et c = 1 placent les rayons lumineux à 45°.",
       dimensionNote: "Une dimension spatiale est montrée ; les autres sont comprimées.",
     },
+    ru: {
+      title: "Карта причинных связей светового конуса с центром в событии O",
+      description:
+        "Диаграмма плоского пространства-времени с вертикальной осью времени и одним пространственным измерением по горизонтали, с центром в выбранном событии O. Верхний затененный конус — это причинное будущее O. В нем находится событие F, отделенное временеподобным интервалом, на которое O может повлиять. Нижний затененный конус — это причинное прошлое O. В нем находится событие P, отделенное временеподобным интервалом, которое могло повлиять на O. Четыре диагональных световых луча образуют светоподобные границы; L лежит точно на верхней правой границе. S лежит в правой пространственноподобной области вне конуса и отделено от O пространственноподобным интервалом. Масштабы осей одинаковы, поэтому свет движется под углом 45 градусов; используются единицы, в которых c равна 1.",
+      axes: "Оси пространства-времени",
+      regions: "Причинные области относительно события O",
+      examples: "Примеры событий и их интервалы относительно O",
+      position: "Положение,",
+      time: "Время,",
+      future: "ПРИЧИННОЕ БУДУЩЕЕ",
+      futureDetail: "O может влиять на события здесь",
+      past: "ПРИЧИННОЕ ПРОШЛОЕ",
+      pastDetail: "События здесь могли влиять на O",
+      exterior: "ПРОСТРАНСТВЕННОПОДОБНАЯ ЗОНА",
+      exteriorDetail: "Нет причинной связи с O",
+      boundary: "Световые лучи и граница светового конуса",
+      boundaryTitle: "Световые лучи",
+      boundaryDetail: "граница светового конуса",
+      chosen: "Выбранное событие",
+      eventO: "O",
+      eventF: "F",
+      eventP: "P",
+      eventL: "L",
+      eventS: "S",
+      timelike: "временеподобный интервал",
+      futureRelation: "O может повлиять",
+      pastRelation: "могло повлиять на O",
+      lightlike: "светоподобный интервал",
+      onBoundary: "на границе",
+      spacelike: "пространственноподобный интервал",
+      outsideCone: "вне конуса",
+      scaleNote: "Одинаковые масштабы осей и c = 1 дают угол световых лучей 45°.",
+      dimensionNote: "Показано одно пространственное измерение; остальные сжаты.",
+    },
   };
   const LANGUAGES = Object.freeze(Object.keys(COPY));
   const LAYOUT = {
     en: { boundaryLabelX: 165 },
     es: { boundaryLabelX: 185 },
     fr: { boundaryLabelX: 175 },
+    ru: { boundaryLabelX: 135 },
   };
 
   function escapeXml(value) {
@@ -173,6 +208,12 @@
       .chosen-label { fill: #7c3f2c; font-size: 19px; font-weight: 750; }
       .note { fill: #62727a; font-size: 17px; font-weight: 500; }
       .note-rule { stroke: #aeb9b7; stroke-width: 2; }
+      svg:lang(ru) .region-title { font-size: 20px; letter-spacing: 0.035em; }
+      svg:lang(ru) .region-detail { font-size: 17px; }
+      svg:lang(ru) .exterior-title { font-size: 12px; letter-spacing: 0.015em; }
+      svg:lang(ru) .exterior-detail { font-size: 14px; }
+      svg:lang(ru) .event-label { font-size: 16px; }
+      svg:lang(ru) .note { font-size: 14px; }
     </style>
   </defs>
 

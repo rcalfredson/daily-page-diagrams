@@ -39,7 +39,15 @@ node render.js --language fr
 
 This writes `output/light-cone-causal-map-fr.svg`. The short form `-l fr` and `--language=fr` are also supported. The browser preview includes English, Spanish, and French controls and downloads the currently displayed language.
 
-Reader-facing SVG text is centralized in the `COPY` object in `diagram.js`, allowing English, Spanish, and French to share identical geometry.
+Generate the Russian SVG with:
+
+```bash
+node render.js --language ru
+```
+
+This writes `output/light-cone-causal-map-ru.svg`. The short form `-l ru` and `--language=ru` are also supported. The browser preview includes English, Spanish, French, and Russian controls and downloads the currently displayed language.
+
+Reader-facing SVG text is centralized in the `COPY` object in `diagram.js`, allowing all four languages to share identical geometry.
 
 ## Local PNG export
 
@@ -60,6 +68,11 @@ inkscape output/light-cone-causal-map-fr.svg \
   --export-type=png \
   --export-width=1800 \
   --export-filename=output/light-cone-causal-map-fr.png
+
+inkscape output/light-cone-causal-map-ru.svg \
+  --export-type=png \
+  --export-width=1800 \
+  --export-filename=output/light-cone-causal-map-ru.png
 ```
 
 Generated PNGs under `output/` are ignored by Git and should not be committed.

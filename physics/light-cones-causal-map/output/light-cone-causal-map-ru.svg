@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="960" viewBox="0 0 1440 960" role="img" aria-labelledby="diagram-title diagram-description" lang="ru" xml:lang="ru">
+  <title id="diagram-title">Карта причинных связей светового конуса с центром в событии O</title>
+  <desc id="diagram-description">Диаграмма плоского пространства-времени с вертикальной осью времени и одним пространственным измерением по горизонтали, с центром в выбранном событии O. Верхний затененный конус — это причинное будущее O. В нем находится событие F, отделенное временеподобным интервалом, на которое O может повлиять. Нижний затененный конус — это причинное прошлое O. В нем находится событие P, отделенное временеподобным интервалом, которое могло повлиять на O. Четыре диагональных световых луча образуют светоподобные границы; L лежит точно на верхней правой границе. S лежит в правой пространственноподобной области вне конуса и отделено от O пространственноподобным интервалом. Масштабы осей одинаковы, поэтому свет движется под углом 45 градусов; используются единицы, в которых c равна 1.</desc>
+  <defs>
+    <marker id="axis-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="20" markerHeight="20" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 Z" fill="#304452" />
+    </marker>
+    <style>
+      text { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .axis { fill: none; stroke: #304452; stroke-width: 3; stroke-linecap: round; }
+      .axis-label { fill: #263946; font-size: 27px; font-weight: 600; }
+      .axis-symbol { font-size: 31px; font-style: italic; }
+      .exterior-fill { fill: #e4ded3; fill-opacity: 0.68; }
+      .cone-fill { fill: #78b5c5; fill-opacity: 0.22; }
+      .cone-boundary { fill: none; stroke: #28758a; stroke-width: 6; stroke-linecap: round; }
+      .region-title { fill: #2b6171; font-size: 24px; font-weight: 760; letter-spacing: 0.075em; }
+      .region-detail { fill: #4f6f79; font-size: 20px; font-weight: 500; }
+      .exterior-title { fill: #647573; font-size: 18px; font-weight: 750; letter-spacing: 0.07em; }
+      .exterior-detail { fill: #6f7e7b; font-size: 17px; font-weight: 500; }
+      .boundary-label { fill: #245f72; font-size: 19px; font-weight: 650; }
+      .boundary-detail { fill: #58747c; font-size: 17px; font-weight: 500; }
+      .boundary-leader { fill: none; stroke: #6f929b; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+      .event-example circle { fill: #fffdfa; stroke: #2c6f82; stroke-width: 4; }
+      .event-letter { fill: #173b48; font-size: 23px; font-weight: 800; }
+      .event-label { fill: #263f4b; font-size: 20px; font-weight: 700; }
+      .event-detail { fill: #62747c; font-size: 17px; font-weight: 500; }
+      .event-o .halo { fill: #fbf8f1; stroke: #263946; stroke-width: 2.5; }
+      .event-o .core { fill: #c76543; }
+      .o-letter { fill: #fff; font-size: 23px; font-weight: 800; }
+      .chosen-label { fill: #7c3f2c; font-size: 19px; font-weight: 750; }
+      .note { fill: #62727a; font-size: 17px; font-weight: 500; }
+      .note-rule { stroke: #aeb9b7; stroke-width: 2; }
+      svg:lang(ru) .region-title { font-size: 20px; letter-spacing: 0.035em; }
+      svg:lang(ru) .region-detail { font-size: 17px; }
+      svg:lang(ru) .exterior-title { font-size: 12px; letter-spacing: 0.015em; }
+      svg:lang(ru) .exterior-detail { font-size: 14px; }
+      svg:lang(ru) .event-label { font-size: 16px; }
+      svg:lang(ru) .note { font-size: 14px; }
+    </style>
+  </defs>
+
+  <rect width="1440" height="960" fill="#fbf8f1" />
+
+  <g aria-label="Причинные области относительно события O">
+    <path class="exterior-fill" d="M 110 90 L 330 90 L 720 480 L 330 870 L 110 870 Z" />
+    <path class="exterior-fill" d="M 1330 90 L 1110 90 L 720 480 L 1110 870 L 1330 870 Z" />
+    <path class="cone-fill" d="M 330 90 L 720 480 L 1110 90 Z" />
+    <path class="cone-fill" d="M 720 480 L 330 870 L 1110 870 Z" />
+  </g>
+
+  <g aria-label="Оси пространства-времени">
+    <path class="axis" d="M 110 480 L 1330 480" marker-end="url(#axis-arrow)" />
+    <path class="axis" d="M 720 885 L 720 70" marker-end="url(#axis-arrow)" />
+    <text class="axis-label" x="1305" y="528" text-anchor="end">Положение, <tspan class="axis-symbol">x</tspan></text>
+    <text class="axis-label" x="750" y="82">Время, <tspan class="axis-symbol">t</tspan></text>
+  </g>
+
+  <g aria-label="Световые лучи и граница светового конуса">
+    <path class="cone-boundary" d="M 330 90 L 720 480 L 1110 90" />
+    <path class="cone-boundary" d="M 330 870 L 720 480 L 1110 870" />
+    <path class="boundary-leader" d="M 340 218 L 405 218 L 444 204" />
+    <text class="boundary-label" x="135" y="184">Световые лучи</text>
+    <text class="boundary-detail" x="135" y="212">граница светового конуса</text>
+  </g>
+
+  <g>
+    <text class="region-title" x="570" y="160" text-anchor="middle">ПРИЧИННОЕ БУДУЩЕЕ</text>
+    <text class="region-detail" x="570" y="191" text-anchor="middle">O может влиять на события здесь</text>
+    <text class="region-title" x="850" y="744" text-anchor="middle">ПРИЧИННОЕ ПРОШЛОЕ</text>
+    <text class="region-detail" x="850" y="775" text-anchor="middle">События здесь могли влиять на O</text>
+
+    <text class="exterior-title" x="165" y="356">ПРОСТРАНСТВЕННОПОДОБНАЯ ЗОНА</text>
+    <text class="exterior-detail" x="165" y="384">Нет причинной связи с O</text>
+    <text class="exterior-title" x="1035" y="356">ПРОСТРАНСТВЕННОПОДОБНАЯ ЗОНА</text>
+    <text class="exterior-detail" x="1035" y="384">Нет причинной связи с O</text>
+  </g>
+
+  <g aria-label="Примеры событий и их интервалы относительно O">
+    <g class="event-example" transform="translate(755 195)">
+      <circle r="13" />
+      <text class="event-letter" x="0" y="8" text-anchor="middle">F</text>
+      <text class="event-label" x="33" y="-6">временеподобный интервал</text>
+      <text class="event-detail" x="33" y="19">O может повлиять</text>
+    </g>
+
+    <g class="event-example" transform="translate(660 790)">
+      <circle r="13" />
+      <text class="event-letter" x="0" y="8" text-anchor="middle">P</text>
+      <text class="event-label" x="-30" y="-7" text-anchor="end">временеподобный интервал</text>
+      <text class="event-detail" x="-30" y="18" text-anchor="end">могло повлиять на O</text>
+    </g>
+
+    <g class="event-example" transform="translate(1040 160)">
+      <circle r="13" />
+      <text class="event-letter" x="0" y="8" text-anchor="middle">L</text>
+      <text class="event-label" x="38" y="-6">светоподобный интервал</text>
+      <text class="event-detail" x="38" y="19">на границе</text>
+    </g>
+
+    <g class="event-example" transform="translate(1080 600)">
+      <circle r="13" />
+      <text class="event-letter" x="0" y="8" text-anchor="middle">S</text>
+      <text class="event-label" x="30" y="-6">пространственноподобный интервал</text>
+      <text class="event-detail" x="30" y="19">вне конуса</text>
+    </g>
+
+    <g class="event-o" transform="translate(720 480)">
+      <circle class="halo" r="25" />
+      <circle class="core" r="19" />
+      <text class="o-letter" x="0" y="8" text-anchor="middle">O</text>
+    </g>
+    <path class="boundary-leader" d="M 645 439 L 669 439 L 688 457" />
+    <text class="chosen-label" x="625" y="445" text-anchor="end">Выбранное событие</text>
+  </g>
+
+  <g>
+    <path class="note-rule" d="M 275 912 L 1165 912" />
+    <text class="note" x="720" y="938" text-anchor="middle">Одинаковые масштабы осей и c = 1 дают угол световых лучей 45°. Показано одно пространственное измерение; остальные сжаты.</text>
+  </g>
+</svg>
