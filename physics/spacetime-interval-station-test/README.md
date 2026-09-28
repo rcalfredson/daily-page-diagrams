@@ -32,7 +32,13 @@ The equivalent explicit form is `node render.js --language en`. Both write `outp
 node render.js --language ru
 ```
 
-The renderer also supports the reference diagrams' short (`-l ru`) and equals-sign (`--language=ru`) forms. All reader-facing SVG text is centralized in the `COPY` object in `diagram.js`, so both languages use identical geometry.
+To generate the Hindi version at `output/spacetime-interval-station-test-hi.svg`, run:
+
+```bash
+node render.js --language hi
+```
+
+The renderer also supports the reference diagrams' short (`-l hi`) and equals-sign (`--language=hi`) forms for any supported language. All reader-facing SVG text is centralized in the `COPY` object in `diagram.js`, so all three languages use identical geometry.
 
 Open `index.html` in a browser for a responsive article-width preview and an SVG download link. No package installation or external JavaScript dependency is required.
 
