@@ -18,6 +18,12 @@ Each diagram lives in its own directory with its source code, generated SVG file
   - A numerical light-cone comparison of spacelike, lightlike, and timelike alarm events on one stationary station worldline.
   - Generates an English SVG and preserves the shared command-line language interface for future translations.
 
+### Biology
+
+- [Neuronal neurotransmission](biology/neuronal-neurotransmission/)
+  - A schematic chemical-to-electrical-to-chemical-to-electrical path through two neurons and a chemical synapse.
+  - Distinguishes an action potential within a neuron from neurotransmitter signaling between neurons.
+
 ## Repository principles
 
 - Diagrams should be reproducible from source.

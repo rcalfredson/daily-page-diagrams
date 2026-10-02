@@ -1,0 +1,188 @@
+(function (root, factory) {
+  const api = factory();
+  if (typeof module === "object" && module.exports) module.exports = api;
+  root.NeuronalNeurotransmission = api;
+})(typeof globalThis !== "undefined" ? globalThis : this, function () {
+  "use strict";
+
+  const WIDTH = 1440;
+  const HEIGHT = 900;
+
+  function createSvg() {
+    return `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="${WIDTH}" height="${HEIGHT}" viewBox="0 0 ${WIDTH} ${HEIGHT}" role="img" aria-labelledby="diagram-title diagram-description" lang="en" xml:lang="en">
+  <title id="diagram-title">How a signal passes from one neuron to another</title>
+  <desc id="diagram-description">A simplified diagram showing a chemical signal entering Neuron A, becoming an electrical action potential along its axon, converting to chemical neurotransmitter signaling across a synaptic cleft, and producing an electrical change in Neuron B. The response in Neuron B may contribute to, but does not necessarily cause, a new action potential.</desc>
+  <defs>
+    <marker id="flow-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="16" markerHeight="16" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 Z" fill="#304452" />
+    </marker>
+    <marker id="small-arrow" viewBox="0 0 10 10" refX="8.3" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 Z" fill="#28758a" />
+    </marker>
+    <marker id="pulse-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="15" markerHeight="15" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 Z" fill="#c76543" />
+    </marker>
+    <style>
+      text { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .stage-rule { stroke: #c5cdca; stroke-width: 2; }
+      .stage-arrow { fill: none; stroke: #849497; stroke-width: 2.5; marker-end: url(#flow-arrow); }
+      .stage-number { fill: #fffdfa; stroke: #28758a; stroke-width: 2.5; }
+      .stage-number-text { fill: #286a7d; font-size: 17px; font-weight: 800; }
+      .stage-kind { fill: #2b6575; font-size: 15px; font-weight: 780; letter-spacing: 0.075em; }
+      .stage-detail { fill: #52676e; font-size: 17px; font-weight: 580; }
+      .neuron-fill { fill: #dcebee; stroke: #28758a; stroke-width: 5; stroke-linejoin: round; }
+      .neuron-inner { fill: none; stroke: #78aeba; stroke-width: 2; stroke-linecap: round; }
+      .nucleus { fill: #fbf8f1; stroke: #5b8791; stroke-width: 3; }
+      .neuron-name { fill: #253d48; font-size: 22px; font-weight: 780; }
+      .anatomy-label { fill: #62757a; font-size: 16px; font-weight: 550; }
+      .signal-path { fill: none; stroke: #c76543; stroke-width: 7; stroke-linecap: round; stroke-dasharray: 9 15; marker-end: url(#pulse-arrow); }
+      .signal-label { fill: #87462f; font-size: 21px; font-weight: 780; }
+      .signal-detail { fill: #695e59; font-size: 16px; font-weight: 540; }
+      .leader { fill: none; stroke: #89989a; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .receptor { fill: #fffdfa; stroke: #39766c; stroke-width: 3; stroke-linejoin: round; }
+      .channel { fill: #fffdfa; stroke: #39766c; stroke-width: 3; }
+      .neurotransmitter { fill: #c76543; stroke: #8c4932; stroke-width: 1.5; }
+      .calcium { fill: #28758a; }
+      .ion { fill: #39766c; }
+      .vesicle { fill: #fffdfa; fill-opacity: 0.9; stroke: #7a9294; stroke-width: 2.5; }
+      .process-arrow { fill: none; stroke: #28758a; stroke-width: 3; stroke-linecap: round; marker-end: url(#small-arrow); }
+      .chemical-arrow { fill: none; stroke: #c76543; stroke-width: 3; stroke-linecap: round; marker-end: url(#pulse-arrow); }
+      .annotation-title { fill: #263f4b; font-size: 18px; font-weight: 740; }
+      .annotation-detail { fill: #607278; font-size: 16px; font-weight: 530; }
+      .cleft-fill { fill: #efe9dd; }
+      .cleft-label { fill: #5c544c; font-size: 16px; font-weight: 740; }
+      .junction-title { fill: #7b4938; font-size: 18px; font-weight: 760; }
+      .junction-detail { fill: #6b6863; font-size: 15px; font-weight: 540; }
+      .outcome-box { fill: #fffdfa; stroke: #9bb5b4; stroke-width: 2.5; }
+      .outcome-title { fill: #315f5a; font-size: 18px; font-weight: 760; }
+      .outcome-detail { fill: #5d706f; font-size: 15px; font-weight: 540; }
+      .note-rule { stroke: #aeb9b7; stroke-width: 2; }
+      .note { fill: #65757a; font-size: 15px; font-weight: 520; }
+    </style>
+  </defs>
+
+  <rect width="${WIDTH}" height="${HEIGHT}" fill="#fbf8f1" />
+
+  <g aria-label="Signal sequence from chemical to electrical to chemical to electrical">
+    <path class="stage-rule" d="M 90 155 L 1350 155" />
+    <path class="stage-arrow" d="M 310 106 L 385 106" />
+    <path class="stage-arrow" d="M 690 106 L 765 106" />
+    <path class="stage-arrow" d="M 1048 106 L 1123 106" />
+
+    <g transform="translate(100 78)">
+      <circle class="stage-number" cx="18" cy="28" r="18" />
+      <text class="stage-number-text" x="18" y="34" text-anchor="middle">1</text>
+      <text class="stage-kind" x="48" y="19">CHEMICAL INPUT</text>
+      <text class="stage-detail" x="48" y="43">to Neuron A</text>
+    </g>
+    <g transform="translate(400 78)">
+      <circle class="stage-number" cx="18" cy="28" r="18" />
+      <text class="stage-number-text" x="18" y="34" text-anchor="middle">2</text>
+      <text class="stage-kind" x="48" y="19">ELECTRICAL SIGNAL</text>
+      <text class="stage-detail" x="48" y="43">within Neuron A</text>
+    </g>
+    <g transform="translate(780 78)">
+      <circle class="stage-number" cx="18" cy="28" r="18" />
+      <text class="stage-number-text" x="18" y="34" text-anchor="middle">3</text>
+      <text class="stage-kind" x="48" y="19">CHEMICAL SIGNAL</text>
+      <text class="stage-detail" x="48" y="43">between neurons</text>
+    </g>
+    <g transform="translate(1135 78)">
+      <circle class="stage-number" cx="18" cy="28" r="18" />
+      <text class="stage-number-text" x="18" y="34" text-anchor="middle">4</text>
+      <text class="stage-kind" x="48" y="19">ELECTRICAL RESPONSE</text>
+      <text class="stage-detail" x="48" y="43">in Neuron B</text>
+    </g>
+  </g>
+
+  <g aria-label="Neuron A receives chemical input and carries an action potential">
+    <path class="neuron-fill" d="M 174 407 C 149 365 111 350 82 329 C 126 337 159 348 185 370 C 180 324 161 292 143 263 C 184 292 207 327 217 365 C 232 329 263 303 302 284 C 275 313 255 345 254 380 C 291 359 329 354 368 359 C 331 369 297 384 273 412 C 292 444 287 489 260 515 C 230 545 179 545 146 518 C 111 490 102 441 127 405 C 142 385 158 389 174 407 Z" />
+    <circle class="nucleus" cx="205" cy="451" r="38" />
+    <path class="neuron-fill" d="M 270 430 C 379 421 488 423 596 431 C 684 438 759 424 814 433 L 814 478 C 747 487 679 473 592 480 C 479 488 376 485 270 474 Z" />
+    <path class="neuron-inner" d="M 308 450 C 440 441 548 459 657 451 C 710 447 756 451 795 455" />
+    <path class="neuron-fill" d="M 804 416 C 846 393 891 405 908 439 C 922 466 913 504 884 519 C 855 534 826 518 808 492 Z" />
+    <text class="neuron-name" x="117" y="585">Neuron A</text>
+    <text class="anatomy-label" x="329" y="513">axon</text>
+
+    <circle class="neurotransmitter" cx="95" cy="390" r="7" />
+    <circle class="neurotransmitter" cx="72" cy="412" r="7" />
+    <circle class="neurotransmitter" cx="98" cy="431" r="7" />
+    <path class="receptor" d="M 126 398 L 139 408 L 134 423 L 116 423 L 111 408 Z" />
+    <path class="process-arrow" d="M 86 405 L 112 410" />
+    <path class="process-arrow" d="M 145 420 C 162 430 167 441 169 455" />
+    <path class="leader" d="M 106 263 L 106 343" />
+    <text class="annotation-title" x="52" y="207">Neurotransmitter</text>
+    <text class="annotation-title" x="52" y="231">changes ion flow</text>
+    <text class="annotation-detail" x="52" y="258">Membrane voltage changes</text>
+
+    <path class="signal-path" d="M 305 452 C 437 444 545 462 657 452 C 711 447 760 451 803 454" />
+    <text class="signal-label" x="530" y="381" text-anchor="middle">Action potential</text>
+    <text class="signal-detail" x="530" y="407" text-anchor="middle">a propagating change in membrane voltage</text>
+  </g>
+
+  <g aria-label="Presynaptic terminal converts the electrical signal to neurotransmitter release">
+    <path class="process-arrow" d="M 831 348 L 831 399" />
+    <circle class="calcium" cx="817" cy="343" r="5" />
+    <circle class="calcium" cx="835" cy="331" r="5" />
+    <circle class="calcium" cx="849" cy="347" r="5" />
+    <text class="annotation-title" x="790" y="286">Ca²⁺ enters</text>
+    <text class="annotation-detail" x="754" y="310">when the action potential arrives</text>
+
+    <circle class="vesicle" cx="860" cy="451" r="24" />
+    <circle class="neurotransmitter" cx="852" cy="445" r="4.5" />
+    <circle class="neurotransmitter" cx="868" cy="442" r="4.5" />
+    <circle class="neurotransmitter" cx="861" cy="458" r="4.5" />
+    <path class="chemical-arrow" d="M 881 461 C 895 467 901 472 908 480" />
+  </g>
+
+  <g aria-label="Chemical signaling across the synaptic cleft">
+    <path class="cleft-fill" d="M 914 401 C 926 426 927 493 914 519 L 975 519 C 961 492 960 430 975 401 Z" />
+    <path class="leader" d="M 946 518 L 946 570" />
+    <text class="cleft-label" x="946" y="598" text-anchor="middle">Synaptic cleft</text>
+    <text class="junction-detail" x="946" y="621" text-anchor="middle">tiny gap · enlarged here</text>
+
+    <circle class="neurotransmitter" cx="920" cy="445" r="6" />
+    <circle class="neurotransmitter" cx="938" cy="474" r="6" />
+    <circle class="neurotransmitter" cx="955" cy="433" r="6" />
+    <circle class="neurotransmitter" cx="960" cy="494" r="6" />
+    <path class="chemical-arrow" d="M 915 465 L 968 465" />
+    <text class="junction-title" x="945" y="655" text-anchor="middle">Chemical signaling</text>
+    <text class="junction-detail" x="945" y="678" text-anchor="middle">neurotransmitter crosses the gap</text>
+  </g>
+
+  <g aria-label="Neuron B receives neurotransmitter and its membrane voltage changes">
+    <path class="neuron-fill" d="M 980 406 C 1013 418 1041 426 1072 433 C 1112 442 1140 433 1167 409 C 1196 383 1242 377 1279 397 C 1309 413 1328 445 1324 478 C 1320 514 1296 543 1262 553 C 1223 564 1183 548 1161 516 C 1137 482 1104 476 1067 484 C 1030 493 1004 506 980 519 Z" />
+    <circle class="nucleus" cx="1243" cy="466" r="38" />
+    <path class="neuron-fill" d="M 1280 399 C 1307 367 1340 343 1377 328 C 1345 355 1329 383 1320 414 M 1310 438 C 1349 420 1378 416 1403 418 C 1370 430 1344 447 1322 466 M 1308 510 C 1345 531 1364 555 1382 586 C 1352 560 1323 549 1290 544" />
+    <text class="neuron-name" x="1196" y="608">Neuron B</text>
+
+    <path class="receptor" d="M 973 430 L 986 440 L 981 455 L 963 455 L 958 440 Z" />
+    <path class="receptor" d="M 974 475 L 987 485 L 982 500 L 964 500 L 959 485 Z" />
+    <path class="channel" d="M 1001 429 L 1012 429 L 1012 461 L 1001 461 Z M 1022 429 L 1033 429 L 1033 461 L 1022 461 Z" />
+    <circle class="ion" cx="1007" cy="407" r="5" />
+    <circle class="ion" cx="1027" cy="392" r="5" />
+    <path class="process-arrow" d="M 1017 405 L 1017 471" />
+    <path class="process-arrow" d="M 1048 465 C 1080 465 1100 463 1124 462" />
+
+    <path class="leader" d="M 1018 383 L 1018 327 L 1110 327" />
+    <text class="annotation-title" x="1060" y="269">Neurotransmitter binds receptors</text>
+    <text class="annotation-title" x="1060" y="293">and changes ion flow</text>
+    <text class="annotation-detail" x="1060" y="320">Membrane voltage changes</text>
+
+    <rect class="outcome-box" x="1090" y="648" width="290" height="96" rx="12" />
+    <text class="outcome-title" x="1235" y="681" text-anchor="middle">May contribute to a new</text>
+    <text class="outcome-title" x="1235" y="705" text-anchor="middle">action potential</text>
+    <text class="outcome-detail" x="1235" y="730" text-anchor="middle">a single input may not be sufficient</text>
+  </g>
+
+  <g aria-label="Explanatory note">
+    <path class="note-rule" d="M 170 806 L 1270 806" />
+    <text class="note" x="720" y="838" text-anchor="middle">Signal form: chemical → electrical → chemical → electrical</text>
+    <text class="note" x="720" y="865" text-anchor="middle">Simplified chemical synapse; shapes and distances are schematic and not to scale.</text>
+  </g>
+</svg>`;
+  }
+
+  return { createSvg, WIDTH, HEIGHT };
+});
