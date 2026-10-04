@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="title description" lang="en" xml:lang="en">
+<title id="title">How inhibition can increase activity: disinhibition</title>
+<desc id="description">Two panels show the same circuit: inhibitory neuron A inhibits inhibitory neuron B, which inhibits downstream neuron C. At baseline, A is less active, B strongly inhibits C, and C has lower activity. When A becomes active, it suppresses B, reducing B’s inhibition of C and allowing C’s activity to increase. Flat bars denote inhibition; thicker solid connections denote stronger inhibition and thinner dashed connections weaker inhibition. More output spikes indicate greater C activity. The circuit and spikes are schematic, not measurements.</desc>
+<defs><style>
+text {font-family:"DejaVu Sans",Arial,sans-serif;fill:#283e38;}
+.title {font-size:32px;font-weight:700;} .heading {font-size:23px;font-weight:700;}
+.label {font-size:20px;} .muted {font-size:18px;fill:#64736d;}
+.small {font-size:16px;fill:#64736d;} .active {font-size:18px;font-weight:700;}
+.footer {font-size:18px;fill:#64736d;}
+.sequence {font-size:18px;} .takeaway {font-size:23px;font-weight:700;}
+</style></defs>
+<rect width="1200" height="650" fill="#f8f6ef"/>
+<text x="32" y="52" class="title" >How inhibition can increase activity: disinhibition</text>
+<text x="32" y="87" class="label" >Inhibiting an inhibitory neuron can release a downstream target from restraint.</text>
+<g stroke="#78658b" stroke-width="3"><path d="M 34 117 H 70 M 70 108 V 126"/></g>
+<text x="82" y="124" class="small" >Inhibition</text>
+<text x="1168" y="124" class="small" text-anchor="end">Same circuit • two activity states</text>
+<g transform="translate(32 145)">
+      <rect width="556" height="354" rx="16" fill="#fffdfa" stroke="#deded5"/>
+      <text x="24" y="40" class="heading" >A. Baseline inhibition</text>
+      <text x="24" y="70" class="label" >B restrains C while A is less active.</text>
+      <g stroke="#78658b" fill="none" stroke-width="2" opacity="0.4">
+      <path d="M 116 190 H 193" stroke-dasharray="5 6"/>
+      <path d="M 193 176 V 204"/>
+    </g><text x="154.5" y="226" class="small" text-anchor="middle">Weak</text><g stroke="#78658b" fill="none" stroke-width="6" opacity="1">
+      <path d="M 276 190 H 353" />
+      <path d="M 353 176 V 204"/>
+    </g><text x="314.5" y="226" class="small" text-anchor="middle">Strong</text>
+      <g transform="translate(76 190)">
+      <text x="0" y="-72" class="heading" text-anchor="middle">Neuron A</text>
+      <text x="0" y="-45" class="muted" text-anchor="middle">Inhibitory</text>
+      <g stroke="#78658b" stroke-width="2.5" fill="none" opacity="0.45">
+        <path d="M -26 -12 L -43 -30 M -38 -25 L -48 -21 M -24 13 L -43 31 M -37 26 L -47 23 M -7 -27 L -13 -43 M 8 27 L 14 41"/>
+        <circle r="28" fill="#e6e0ee"/>
+        <circle r="7" fill="#78658b" stroke="none"/>
+      </g>
+      <text x="0" y="78" class="muted" text-anchor="middle">Less active</text>
+    </g><g transform="translate(236 190)">
+      <text x="0" y="-72" class="heading" text-anchor="middle">Neuron B</text>
+      <text x="0" y="-45" class="muted" text-anchor="middle">Inhibitory</text>
+      <g stroke="#78658b" stroke-width="4" fill="none" opacity="1">
+        <path d="M -26 -12 L -43 -30 M -38 -25 L -48 -21 M -24 13 L -43 31 M -37 26 L -47 23 M -7 -27 L -13 -43 M 8 27 L 14 41"/>
+        <circle r="28" fill="#e6e0ee"/>
+        <circle r="7" fill="#78658b" stroke="none"/>
+      </g>
+      <text x="0" y="78" class="active" text-anchor="middle">Active</text>
+    </g><g transform="translate(396 190)">
+      <text x="0" y="-72" class="heading" text-anchor="middle">Neuron C</text>
+      <text x="0" y="-45" class="muted" text-anchor="middle">Downstream target</text>
+      <g stroke="#287568" stroke-width="2.5" fill="none" opacity="0.45">
+        <path d="M -26 -12 L -43 -30 M -38 -25 L -48 -21 M -24 13 L -43 31 M -37 26 L -47 23 M -7 -27 L -13 -43 M 8 27 L 14 41"/>
+        <circle r="28" fill="#e8f0ed"/>
+        <circle r="7" fill="#287568" stroke="none"/>
+      </g>
+      <text x="0" y="78" class="muted" text-anchor="middle">Lower activity</text>
+    </g>
+      <path d="M 444 190 H 540" stroke="#287568" stroke-width="2" opacity="0.4"/>
+      <path d="M 490 190 L 494 165 L 498 190" stroke="#287568" stroke-width="3" fill="none"/>
+      <text x="494" y="227" class="small" text-anchor="middle">Output</text>
+      <path d="M 24 293 H 532" stroke="#deded5"/>
+      <text x="24" y="329" class="sequence" >Strong inhibition from B keeps C less active.</text>
+    </g><g transform="translate(612 145)">
+      <rect width="556" height="354" rx="16" fill="#fffdfa" stroke="#deded5"/>
+      <text x="24" y="40" class="heading" >B. Disinhibition</text>
+      <text x="24" y="70" class="label" >A suppresses the neuron restraining C.</text>
+      <g stroke="#78658b" fill="none" stroke-width="6" opacity="1">
+      <path d="M 116 190 H 193" />
+      <path d="M 193 176 V 204"/>
+    </g><text x="154.5" y="226" class="small" text-anchor="middle">Strong</text><g stroke="#78658b" fill="none" stroke-width="2" opacity="0.4">
+      <path d="M 276 190 H 353" stroke-dasharray="5 6"/>
+      <path d="M 353 176 V 204"/>
+    </g><text x="314.5" y="226" class="small" text-anchor="middle">Weak</text>
+      <g transform="translate(76 190)">
+      <text x="0" y="-72" class="heading" text-anchor="middle">Neuron A</text>
+      <text x="0" y="-45" class="muted" text-anchor="middle">Inhibitory</text>
+      <g stroke="#78658b" stroke-width="4" fill="none" opacity="1">
+        <path d="M -26 -12 L -43 -30 M -38 -25 L -48 -21 M -24 13 L -43 31 M -37 26 L -47 23 M -7 -27 L -13 -43 M 8 27 L 14 41"/>
+        <circle r="28" fill="#e6e0ee"/>
+        <circle r="7" fill="#78658b" stroke="none"/>
+      </g>
+      <text x="0" y="78" class="active" text-anchor="middle">Active</text>
+    </g><g transform="translate(236 190)">
+      <text x="0" y="-72" class="heading" text-anchor="middle">Neuron B</text>
+      <text x="0" y="-45" class="muted" text-anchor="middle">Inhibitory</text>
+      <g stroke="#78658b" stroke-width="2.5" fill="none" opacity="0.45">
+        <path d="M -26 -12 L -43 -30 M -38 -25 L -48 -21 M -24 13 L -43 31 M -37 26 L -47 23 M -7 -27 L -13 -43 M 8 27 L 14 41"/>
+        <circle r="28" fill="#e6e0ee"/>
+        <circle r="7" fill="#78658b" stroke="none"/>
+      </g>
+      <text x="0" y="78" class="muted" text-anchor="middle">Less active</text>
+    </g><g transform="translate(396 190)">
+      <text x="0" y="-72" class="heading" text-anchor="middle">Neuron C</text>
+      <text x="0" y="-45" class="muted" text-anchor="middle">Downstream target</text>
+      <g stroke="#287568" stroke-width="4" fill="none" opacity="1">
+        <path d="M -26 -12 L -43 -30 M -38 -25 L -48 -21 M -24 13 L -43 31 M -37 26 L -47 23 M -7 -27 L -13 -43 M 8 27 L 14 41"/>
+        <circle r="28" fill="#e8f0ed"/>
+        <circle r="7" fill="#287568" stroke="none"/>
+      </g>
+      <text x="0" y="78" class="active" text-anchor="middle">Higher activity</text>
+    </g>
+      <path d="M 444 190 H 540" stroke="#287568" stroke-width="2" opacity="0.4"/>
+      <path d="M 456 190 L 460 165 L 464 190 M 473 190 L 477 165 L 481 190 M 490 190 L 494 165 L 498 190 M 507 190 L 511 165 L 515 190 M 524 190 L 528 165 L 532 190" stroke="#287568" stroke-width="3" fill="none"/>
+      <text x="494" y="227" class="small" text-anchor="middle">Output</text>
+      <path d="M 24 293 H 532" stroke="#deded5"/>
+      <text x="24" y="329" class="sequence" >A inhibits B → B inhibits C less → C is more active</text>
+    </g>
+<rect x="32" y="521" width="1136" height="91" rx="14" fill="#e8f0ed"/>
+<text x="56" y="557" class="takeaway" >Inhibition can increase activity indirectly</text>
+<text x="56" y="588" class="takeaway" >when it suppresses another inhibitory neuron.</text>
+<text x="32" y="637" class="footer" >Schematic circuit and output spikes. C’s increase comes from reduced inhibition by B.</text>
+</svg>

@@ -24,6 +24,9 @@ Each diagram lives in its own directory with its source code, generated SVG file
   - Compares hyperpolarizing, shunting, and depolarizing but still inhibitory responses in a three-panel figure.
   - Shows how opening channels can blunt excitation even when membrane voltage rises.
 
+- [GABAergic disinhibition](biology/gaba-disinhibition/)
+  - Shows how inhibiting an inhibitory neuron reduces restraint on a downstream target and can increase its activity.
+
 - [Neuronal neurotransmission](biology/neuronal-neurotransmission/)
   - A schematic chemical-to-electrical-to-chemical-to-electrical path through two neurons and a chemical synapse.
   - Distinguishes an action potential within a neuron from neurotransmitter signaling between neurons.
