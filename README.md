@@ -20,6 +20,10 @@ Each diagram lives in its own directory with its source code, generated SVG file
 
 ### Biology
 
+- [How GABA_A receptors inhibit neurons](biology/gaba-inhibition/)
+  - Compares hyperpolarizing, shunting, and depolarizing but still inhibitory responses in a three-panel figure.
+  - Shows how opening channels can blunt excitation even when membrane voltage rises.
+
 - [Neuronal neurotransmission](biology/neuronal-neurotransmission/)
   - A schematic chemical-to-electrical-to-chemical-to-electrical path through two neurons and a chemical synapse.
   - Distinguishes an action potential within a neuron from neurotransmitter signaling between neurons.
