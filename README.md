@@ -20,6 +20,10 @@ Each diagram lives in its own directory with its source code, generated SVG file
 
 ### Biology
 
+- [What changes when DNA is methylated?](biology/dna-methylation/)
+  - Compares cytosine with 5-methylcytosine and locates the added methyl group at carbon 5.
+  - Shows a CpG site on one DNA strand, preserved C–G pairing, and an unchanged nucleotide sequence.
+
 - [How GABA_A receptors inhibit neurons](biology/gaba-inhibition/)
   - Compares hyperpolarizing, shunting, and depolarizing but still inhibitory responses in a three-panel figure.
   - Shows how opening channels can blunt excitation even when membrane voltage rises.

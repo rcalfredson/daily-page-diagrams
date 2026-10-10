@@ -1,0 +1,10 @@
+:root { color-scheme: light; font-family: Arial, Helvetica, sans-serif; color: #263746; background: #eee9df; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+main { max-width: 700px; margin: 32px auto; }
+.eyebrow { color: #28758a; margin: 0 16px 16px; }
+nav { text-align: right; margin: 0 16px 20px; }
+a { color: #28758a; }
+figure { margin: 0; }
+#diagram svg { display: block; width: 100%; height: auto; }
+figcaption { margin: 16px; line-height: 1.5; color: #52646d; }
