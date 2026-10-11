@@ -24,6 +24,10 @@ Each diagram lives in its own directory with its source code, generated SVG file
   - Compares cytosine with 5-methylcytosine and locates the added methyl group at carbon 5.
   - Shows a CpG site on one DNA strand, preserved C–G pairing, and an unchanged nucleotide sequence.
 
+- [How does DNA methylation survive replication?](biology/dna-methylation-maintenance/)
+  - Follows a fully methylated CpG into two hemimethylated daughter molecules after semiconservative replication.
+  - Shows how UHRF1 and DNMT1 help restore methylation on new strands while parental marks remain in place.
+
 - [How GABA_A receptors inhibit neurons](biology/gaba-inhibition/)
   - Compares hyperpolarizing, shunting, and depolarizing but still inhibitory responses in a three-panel figure.
   - Shows how opening channels can blunt excitation even when membrane voltage rises.
