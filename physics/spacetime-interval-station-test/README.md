@@ -38,7 +38,13 @@ To generate the Hindi version at `output/spacetime-interval-station-test-hi.svg`
 node render.js --language hi
 ```
 
-The renderer also supports the reference diagrams' short (`-l hi`) and equals-sign (`--language=hi`) forms for any supported language. All reader-facing SVG text is centralized in the `COPY` object in `diagram.js`, so all three languages use identical geometry.
+To generate the Polish version at `output/spacetime-interval-station-test-pl.svg`, run:
+
+```bash
+node render.js --language pl
+```
+
+The renderer also supports the reference diagrams' short (`-l pl`) and equals-sign (`--language=pl`) forms for any supported language. All reader-facing SVG text is centralized in the `COPY` object in `diagram.js`, so all four languages use identical geometry. Polish labels use *przestrzenny*, *zerowy*, and *czasowy* for spacelike, lightlike, and timelike intervals, respectively, with decimal commas and spaces between thousands.
 
 Open `index.html` in a browser for a responsive article-width preview and an SVG download link. No package installation or external JavaScript dependency is required.
 

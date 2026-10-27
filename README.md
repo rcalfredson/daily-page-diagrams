@@ -16,7 +16,7 @@ Each diagram lives in its own directory with its source code, generated SVG file
   - Generates English, Spanish, and French SVGs through a command-line language flag.
 - [The spacetime interval: station test](physics/spacetime-interval-station-test/)
   - A numerical light-cone comparison of spacelike, lightlike, and timelike alarm events on one stationary station worldline.
-  - Generates an English SVG and preserves the shared command-line language interface for future translations.
+  - Generates English, Polish, Russian, and Hindi SVGs through a command-line language flag.
 
 ### Biology
 
