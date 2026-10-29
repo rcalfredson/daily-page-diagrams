@@ -47,6 +47,42 @@
       tick900: "900,000",
       tickMinus300: "−300,000",
     },
+    "zh-Hans": {
+      title: "时空间隔：空间站测试",
+      description:
+        "这是一幅按数值比例绘制的时空图，横轴表示位置，时间沿纵轴向上增加。信号在零千米、零秒处发出。静止空间站的世界线位于九十万千米处，是一条竖直线。两秒时的报警事件用正方形表示，位于未来光锥之外，与信号发射事件之间的间隔为类空间隔，数值为负四点五乘以十的十一次方平方千米。三秒时的报警事件用菱形表示，恰好位于光锥边界上，间隔为零，属于类光间隔。四秒时的报警事件用圆形表示，位于光锥之内，与信号发射事件之间的间隔为类时间隔，数值为正六点三乘以十的十一次方平方千米。光恰好在三秒时到达空间站。",
+      axes: "位置轴与时间轴",
+      cone: "信号发射事件的未来光锥",
+      stationGroup: "空间站的世界线与三个可能的报警事件",
+      position: "位置 x（km）",
+      time: "时间 t（s）",
+      futureCone: "未来光锥",
+      coneDetail: "发出的信号可以到达此区域",
+      lightBoundary: "类光边界",
+      station: "空间站 · x = 900,000 km",
+      alarm2: "2 s 时报警",
+      alarm3: "3 s 时报警",
+      alarm4: "4 s 时报警",
+      spacelike: "类空 · 光锥之外",
+      lightlike: "类光 · 光锥边界上",
+      timelike: "类时 · 光锥之内",
+      interval2: "Δs² = −4.5 × 10¹¹ km²",
+      interval3: "Δs² = 0",
+      interval4: "Δs² = +6.3 × 10¹¹ km²",
+      emission: "信号发射",
+      origin: "x = 0, t = 0",
+      arrival: "光到达：3 s",
+      scale: "c ≈ 300,000 km/s  ·  横向 300,000 km = 纵向 1 s",
+      tick0: "0",
+      tick1: "1",
+      tick2: "2",
+      tick3: "3",
+      tick4: "4",
+      tick300: "300,000",
+      tick600: "600,000",
+      tick900: "900,000",
+      tickMinus300: "−300,000",
+    },
     pl: {
       title: "Interwał czasoprzestrzenny: test ze stacją",
       description:
@@ -231,7 +267,11 @@
       svg:lang(hi) .station-title,
       svg:lang(hi) .event-kind { letter-spacing: 0; }
       svg:lang(hi) .event-kind { font-size: 15px; }
-      svg:lang(hi) .scale-note { font-size: 16px; }
+      svg:lang(hi) .scale-note { font-size: 16px; }${language === "zh-Hans" ? `
+      svg:lang(zh-Hans) text { font-family: "Noto Sans CJK SC", "Microsoft YaHei", "PingFang SC", sans-serif; }
+      svg:lang(zh-Hans) .cone-title,
+      svg:lang(zh-Hans) .station-title,
+      svg:lang(zh-Hans) .event-kind { letter-spacing: 0; }` : ""}
     </style>
   </defs>
 

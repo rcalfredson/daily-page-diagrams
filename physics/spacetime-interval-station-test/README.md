@@ -44,7 +44,13 @@ To generate the Polish version at `output/spacetime-interval-station-test-pl.svg
 node render.js --language pl
 ```
 
-The renderer also supports the reference diagrams' short (`-l pl`) and equals-sign (`--language=pl`) forms for any supported language. All reader-facing SVG text is centralized in the `COPY` object in `diagram.js`, so all four languages use identical geometry. Polish labels use *przestrzenny*, *zerowy*, and *czasowy* for spacelike, lightlike, and timelike intervals, respectively, with decimal commas and spaces between thousands.
+To generate the Simplified Chinese version at `output/spacetime-interval-station-test-zh-Hans.svg`, run:
+
+```bash
+node render.js --language zh-Hans
+```
+
+The renderer also supports the reference diagrams' short (`-l zh-Hans`) and equals-sign (`--language=zh-Hans`) forms for any supported language. All reader-facing SVG text is centralized in the `COPY` object in `diagram.js`, so all five languages use identical geometry. Polish labels use *przestrzenny*, *zerowy*, and *czasowy* for spacelike, lightlike, and timelike intervals, respectively, with decimal commas and spaces between thousands. Simplified Chinese uses 类空, 类光, and 类时, respectively, and retains SI unit symbols. Its font stack prefers Noto Sans CJK SC, Microsoft YaHei, or PingFang SC; install a Simplified Chinese font for local PNG export.
 
 Open `index.html` in a browser for a responsive article-width preview and an SVG download link. No package installation or external JavaScript dependency is required.
 
